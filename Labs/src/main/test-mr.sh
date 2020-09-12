@@ -56,6 +56,11 @@ wait
 # to exit when a job is completely finished, and not before,
 # that means the job has finished.
 
+# remove down
+echo "ending tests"
+exit 1
+# remove up
+
 sort mr-out* | grep . > mr-wc-all
 if cmp mr-wc-all mr-correct-wc.txt
 then

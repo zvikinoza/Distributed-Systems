@@ -8,20 +8,31 @@ import (
 	"os"
 )
 
+// Master ...
 type Master struct {
-	// Your definitions here.
-
+	files   []string
+	nReduce int
+	done    bool
 }
 
-// Your code here -- RPC handlers for the worker to call.
+// HandShake ...
+func (m *Master) HandShake(wi *WorkerInfo, mi *MasterInfo) error {
+	return nil
+}
 
 //
-// an example RPC handler.
+// GetTask sends next Task to Woker
 //
-// the RPC argument and reply types are defined in rpc.go.
+// 	if map phase
+// 		if no more map tasks -> wait
+// 		else 				 -> map, file
+// 	if reduce phase
+// 		if no more reduce tasks -> wait
+// 		else 					-> reduce, file
+// 	if done -> exit
 //
-func (m *Master) Example(args *ExampleArgs, reply *ExampleReply) error {
-	reply.Y = args.X + 1
+func (m *Master) GetTask(wi *WorkerInfo, t *Task) error {
+	os.Exit(1)
 	return nil
 }
 
@@ -42,27 +53,31 @@ func (m *Master) server() {
 }
 
 //
-// main/mrmaster.go calls Done() periodically to find out
+// Done main/mrmaster.go calls Done() periodically to find out
 // if the entire job has finished.
 //
 func (m *Master) Done() bool {
-	ret := false
-
-	// Your code here.
-
-	return ret
+	return m.done
 }
 
 //
-// create a Master.
+// MakeMaster is created.
 // main/mrmaster.go calls this function.
 // nReduce is the number of reduce tasks to use.
 //
 func MakeMaster(files []string, nReduce int) *Master {
-	m := Master{}
-
-	// Your code here.
+	m := Master{
+		files:   files,
+		nReduce: nReduce,
+		done:    false,
+	}
 
 	m.server()
 	return &m
+}
+
+// Example RPC handler.
+func (m *Master) Example(args *ExampleArgs, reply *ExampleReply) error {
+	reply.Y = args.X + 1
+	return nil
 }
