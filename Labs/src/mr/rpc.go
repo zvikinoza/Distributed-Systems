@@ -11,7 +11,7 @@ import (
 	"strconv"
 )
 
-// Add your RPC definitions here.
+// Enum for functions
 const (
 	Map    = iota
 	Reduce = iota
@@ -19,24 +19,49 @@ const (
 	Exit   = iota
 )
 
-// TaskType is enum for differentating between tasks
-type TaskType int
+// TaskCategory is enum for differentating between tasks
+type TaskCategory int
 
-// WorkerInfo is used in RPC HandShake
+// WorkerInfo is used for sending master
 type WorkerInfo struct {
-	id int
+	ID int
 }
 
 // MasterInfo is used in RPC HandSake
 type MasterInfo struct {
-	nReduce int
+	NReduce int
 }
 
 // Task is what is sent as reply from RPC to workers
 type Task struct {
-	taskType TaskType
-	fileName string
-	id       int
+	ID       int
+	Iname    string
+	Category TaskCategory
+}
+
+// TaskFail ...
+type TaskFail struct {
+	WorkerID int
+	TaskID   int
+}
+
+// MapSuccess ...
+type MapSuccess struct {
+	TaskID   int
+	WorkerID int
+	Onames   []string
+}
+
+// ReduceSuccess ...
+type ReduceSuccess struct {
+	TaskID   int
+	WorkerID int
+	Oname    string
+}
+
+// Nil ...
+type Nil struct {
+	Deliver bool
 }
 
 // Cook up a unique-ish UNIX-domain socket name

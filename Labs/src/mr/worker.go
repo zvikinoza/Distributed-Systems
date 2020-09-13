@@ -1,25 +1,13 @@
 package mr
 
 import (
-	"encoding/json"
 	"fmt"
 	"hash/fnv"
-	"io"
-	"io/ioutil"
 	"log"
 	"net/rpc"
 	"os"
-	"strconv"
 	"time"
 )
-
-// ByKey for sorting by key.
-type ByKey []KeyValue
-
-// for sorting by key.
-func (a ByKey) Len() int           { return len(a) }
-func (a ByKey) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
-func (a ByKey) Less(i, j int) bool { return a[i].Key < a[j].Key }
 
 //
 // KeyValue Map functions return a slice of KeyValue.
@@ -45,142 +33,71 @@ func ihash(key string) int {
 func Worker(mapf func(string, string) []KeyValue,
 	reducef func(string, []string) string) {
 
-	wi := WorkerInfo{id: os.Getpid()}
-	mi := MasterInfo{}
-	if !call("Master.HandShake", wi, mi) {
-		log.Fatalln("could not handshake.")
-	}
+	job := setupJob(mapf, reducef)
 
-	// while master not exited (i.e. more tasks left)
 	for {
-		// get task from master
-		t := Task{}
-		if !call("Master.GetTask", wi, t) {
-			break
-		}
+		task := Task{}
+		var err error
 
-		switch t.taskType {
+		call("Master.GetTask", &Nil{}, &task)
+
+		switch task.Category {
 		case Exit:
-			break
+			return
 		case Wait:
 			time.Sleep(time.Second)
 			continue
 		case Map:
-			onames, err := runMap(t.fileName, mi.nReduce, t.id, mapf)
-			if err != nil {
-				fmt.Printf("could not run Map. %+v, err: %v\n", t, err)
+			onames, err := job.runMap(task)
+			if err == nil {
+				sendMapSuccess(onames, job.id, task.ID)
 			}
-			fmt.Println(onames)
 		case Reduce:
-			oname, err := runReduce(t.fileName, t.id, reducef)
-			if err != nil {
-				fmt.Printf("could not run Reduce. %+v, err: %v\n", t, err)
+			oname, err := job.runReduce(task)
+			if err == nil {
+				sendReduceSuccess(oname, job.id, task.ID)
 			}
-			fmt.Println(oname)
 		}
 
-		// TODO: send success and oname/s to master
+		if err != nil {
+			call("Master.TaskFail", task, &Nil{})
+			log.Printf("could not run: %+v, err: %v\n", task, err)
+		}
+	}
+	fmt.Println("exiting worker", job.id)
+}
 
+func setupJob(mapf func(string, string) []KeyValue,
+	reducef func(string, []string) string) *Job {
+
+	wi := WorkerInfo{ID: os.Getpid()}
+	mi := MasterInfo{}
+	call("Master.HandShake", &wi, &mi)
+
+	return &Job{
+		id:      wi.ID,
+		nReduce: mi.NReduce,
+		mapf:    mapf,
+		reducef: reducef,
 	}
 }
 
-// writes output sorted by keys in each readuce file
-func runMap(filename string,
-	nReduce, taskID int,
-	mapf func(string, string) []KeyValue) ([]string, error) {
-
-	// readfile
-	file, err := os.Open(filename)
-	if err != nil {
-		log.Fatalf("could not open %v", filename)
+func sendMapSuccess(onames []string, jobID, taskID int) {
+	ms := MapSuccess{
+		WorkerID: jobID,
+		TaskID:   taskID,
+		Onames:   onames,
 	}
-	contents, err := ioutil.ReadAll(file)
-	if err != nil {
-		log.Fatalf("could not read %v", filename)
-	}
-	file.Close()
-
-	// map
-	intermediate := mapf(filename, string(contents))
-
-	// create intermediate output files
-	onames := make([]string, nReduce)
-	encoders := make([]*json.Encoder, nReduce)
-	fileNameBase := "mr-" + strconv.Itoa(taskID) + "-"
-	for i := 0; i < nReduce; i++ {
-		oname := fileNameBase + strconv.Itoa(i)
-		file, err := os.Create(oname)
-		if err != nil {
-			return []string{}, err
-		}
-		onames[i] = oname
-		encoders[i] = json.NewEncoder(file)
-		defer file.Close()
-	}
-
-	// write key/value to intermediate output files
-	for _, kv := range intermediate {
-		bucket := ihash(kv.Key)
-		err := encoders[bucket].Encode(&kv)
-		if err != nil {
-			return []string{}, err
-		}
-	}
-
-	return onames, nil
+	call("Master.MapSuccess", &ms, &Nil{})
 }
 
-// reduce file should be sorted and merged with same bucket
-func runReduce(filename string, taskID int,
-	reducef func(string, []string) string) (string, error) {
-
-	// read intermediate file
-	ifile, err := os.Open(filename)
-	if err != nil {
-		return "", err
+func sendReduceSuccess(oname string, jobID, taskID int) {
+	rs := ReduceSuccess{
+		WorkerID: jobID,
+		TaskID:   taskID,
+		Oname:    oname,
 	}
-
-	intermediate := []KeyValue{}
-	dec := json.NewDecoder(ifile)
-	for {
-		var kv KeyValue
-		if err := dec.Decode(&kv); err == io.EOF {
-			break
-		} else if err != nil {
-			log.Fatalf("could not decode in runReduce, %v\n", err)
-		}
-		intermediate = append(intermediate, kv)
-	}
-	ifile.Close()
-
-	// create output file
-	oname := "mr-out-" + strconv.Itoa(taskID)
-	ofile, err := os.Create(oname)
-	if err != nil {
-		log.Fatalf("could not create %v file in runRecude. err: %v", oname, err)
-	}
-
-	// run reduce functions for each key/[]value
-	i := 0
-	for i < len(intermediate) {
-		j := i + 1
-		for j < len(intermediate) && intermediate[j].Key == intermediate[i].Key {
-			j++
-		}
-		values := []string{}
-		for k := i; k < j; k++ {
-			values = append(values, intermediate[k].Value)
-		}
-		output := reducef(intermediate[i].Key, values)
-
-		// this is the correct format for each line of Reduce output.
-		fmt.Fprintf(ofile, "%v %v\n", intermediate[i].Key, output)
-
-		i = j
-	}
-	ofile.Close()
-
-	return oname, nil
+	call("Master.ReduceSuccess", &rs, &Nil{})
 }
 
 //
@@ -202,8 +119,7 @@ func call(rpcname string, args interface{}, reply interface{}) bool {
 		return true
 	}
 
-	log.Printf("could not call master. rpcname: %v, err: %v\n", rpcname, err)
-	fmt.Println(err)
+	log.Printf("could not call %v, err: %v\n", rpcname, err)
 	return false
 }
 
