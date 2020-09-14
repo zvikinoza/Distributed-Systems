@@ -10,11 +10,26 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+	"time"
 )
 
 const (
 	reduceInputBase = "reduce-input-"
 )
+
+type idGenerator struct {
+	mu  sync.Mutex
+	cur int
+}
+
+func (ig *idGenerator) nextID() int {
+	ig.mu.Lock()
+	defer ig.mu.Unlock()
+
+	ig.cur = ig.cur + 1
+	id := ig.cur
+	return id
+}
 
 // Master ...
 type Master struct {
@@ -23,33 +38,36 @@ type Master struct {
 	nReduce          int
 	mapDone          bool
 	reduceDone       bool
-	workers          []int
+	idgen            idGenerator
 	tasks            chan Task
-	completedMaps    map[int]MapSuccess
-	completedReduces map[int]ReduceSuccess
+	completedMaps    map[int][]string
+	completedReduces map[int]string
+}
+
+func (m *Master) addTasks(files []string, cat TaskCategory) {
+	for i, file := range files {
+		m.tasks <- Task{ID: i, Iname: file, Category: cat}
+	}
 }
 
 // HandShake ...
-func (m *Master) HandShake(wi *WorkerInfo, mi *MasterInfo) error {
+func (m *Master) HandShake(_ *Nil, mi *MasterInfo) error {
 	m.mu.Lock()
 	defer m.mu.Unlock()
-
-	m.workers = append(m.workers, wi.ID)
 	mi.NReduce = m.nReduce
-
 	return nil
 }
 
 // MapSuccess ...
 func (m *Master) MapSuccess(ms *MapSuccess, _ *Nil) error {
+	m.mu.Lock()
+	defer m.mu.Unlock()
+
 	if m.mapDone {
 		return nil
 	}
 
-	m.mu.Lock()
-	defer m.mu.Unlock()
-
-	m.completedMaps[ms.TaskID] = *ms
+	m.completedMaps[ms.TaskID] = ms.Onames
 
 	if len(m.completedMaps) == m.nFiles {
 		m.mapDone = true
@@ -57,11 +75,8 @@ func (m *Master) MapSuccess(ms *MapSuccess, _ *Nil) error {
 		if err != nil {
 			return err
 		}
-		go func() {
-			for i, rf := range reduceFiles {
-				m.tasks <- Task{ID: i, Iname: rf, Category: Reduce}
-			}
-		}()
+
+		go m.addTasks(reduceFiles, Reduce)
 	}
 
 	return nil
@@ -69,14 +84,14 @@ func (m *Master) MapSuccess(ms *MapSuccess, _ *Nil) error {
 
 // ReduceSuccess ...
 func (m *Master) ReduceSuccess(rs *ReduceSuccess, _ *Nil) error {
+	m.mu.Lock()
+	defer m.mu.Unlock()
+
 	if m.reduceDone {
 		return nil
 	}
 
-	m.mu.Lock()
-	defer m.mu.Unlock()
-
-	m.completedReduces[rs.TaskID] = *rs
+	m.completedReduces[rs.TaskID] = rs.Oname
 
 	if len(m.completedReduces) == m.nReduce {
 		m.reduceDone = true
@@ -87,15 +102,12 @@ func (m *Master) ReduceSuccess(rs *ReduceSuccess, _ *Nil) error {
 
 // TaskFail ...
 func (m *Master) TaskFail(task *Task, _ *Nil) error {
-	m.tasks <- *task
+	m.tasks <- Task{ID: task.ID, Iname: task.Iname, Category: task.Category}
 	return nil
 }
 
 // GetTask ...
 func (m *Master) GetTask(_ *Nil, task *Task) error {
-	m.mu.Lock()
-	defer m.mu.Unlock()
-
 	if m.reduceDone {
 		task.Category = Exit
 		return nil
@@ -106,6 +118,7 @@ func (m *Master) GetTask(_ *Nil, task *Task) error {
 		task.Category = t.Category
 		task.ID = t.ID
 		task.Iname = t.Iname
+		go m.monitorTask(t)
 	default:
 		task.Category = Wait
 	}
@@ -124,22 +137,15 @@ func (m *Master) Done() bool {
 // MakeMaster is created.
 func MakeMaster(files []string, nReduce int) *Master {
 	m := Master{
-		mu:               sync.Mutex{},
 		nFiles:           len(files),
 		nReduce:          nReduce,
-		mapDone:          false,
-		reduceDone:       false,
-		workers:          []int{},
+		idgen:            idGenerator{},
 		tasks:            make(chan Task),
-		completedMaps:    make(map[int]MapSuccess),
-		completedReduces: make(map[int]ReduceSuccess),
+		completedMaps:    make(map[int][]string),
+		completedReduces: make(map[int]string),
 	}
 
-	go func() {
-		for i, file := range files {
-			m.tasks <- Task{ID: i, Iname: file, Category: Map}
-		}
-	}()
+	go m.addTasks(files, Map)
 
 	m.server()
 	return &m
@@ -165,8 +171,8 @@ func (m *Master) mergeMapOutputs() ([]string, error) {
 	// group files by reduce number
 	reduceFiles := []string{}
 	reduceBuckets := make([][]string, m.nReduce)
-	for _, ms := range m.completedMaps {
-		for _, oname := range ms.Onames {
+	for _, onames := range m.completedMaps {
+		for _, oname := range onames {
 			parts := strings.Split(oname, "-")
 			i, err := strconv.Atoi(parts[2])
 			if err != nil {
@@ -198,12 +204,27 @@ func (m *Master) mergeMapOutputs() ([]string, error) {
 			if err != nil {
 				return []string{}, err
 			}
-
 		}
-
 		ofile.Close()
-
 	}
 
 	return reduceFiles, nil
+}
+
+func (m *Master) monitorTask(t Task) {
+	time.Sleep(12 * time.Second)
+
+	m.mu.Lock()
+	defer m.mu.Unlock()
+
+	var ok bool
+	if t.Category == Map {
+		_, ok = m.completedMaps[t.ID]
+	} else if t.Category == Reduce {
+		_, ok = m.completedReduces[t.ID]
+	}
+
+	if !ok {
+		m.tasks <- t
+	}
 }

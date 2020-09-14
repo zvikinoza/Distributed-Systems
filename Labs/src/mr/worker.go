@@ -1,11 +1,9 @@
 package mr
 
 import (
-	"fmt"
 	"hash/fnv"
 	"log"
 	"net/rpc"
-	"os"
 	"time"
 )
 
@@ -45,57 +43,52 @@ func Worker(mapf func(string, string) []KeyValue,
 		case Exit:
 			return
 		case Wait:
-			time.Sleep(time.Second)
+			time.Sleep(8 * time.Second)
 			continue
 		case Map:
 			onames, err := job.runMap(task)
 			if err == nil {
-				sendMapSuccess(onames, job.id, task.ID)
+				sendMapSuccess(onames, task.ID)
 			}
 		case Reduce:
 			oname, err := job.runReduce(task)
 			if err == nil {
-				sendReduceSuccess(oname, job.id, task.ID)
+				sendReduceSuccess(oname, task.ID)
 			}
 		}
 
 		if err != nil {
-			call("Master.TaskFail", task, &Nil{})
+			call("Master.TaskFail", &task, &Nil{})
 			log.Printf("could not run: %+v, err: %v\n", task, err)
 		}
 	}
-	fmt.Println("exiting worker", job.id)
 }
 
 func setupJob(mapf func(string, string) []KeyValue,
 	reducef func(string, []string) string) *Job {
 
-	wi := WorkerInfo{ID: os.Getpid()}
 	mi := MasterInfo{}
-	call("Master.HandShake", &wi, &mi)
+	call("Master.HandShake", &Nil{}, &mi)
 
 	return &Job{
-		id:      wi.ID,
 		nReduce: mi.NReduce,
 		mapf:    mapf,
 		reducef: reducef,
 	}
 }
 
-func sendMapSuccess(onames []string, jobID, taskID int) {
+func sendMapSuccess(onames []string, taskID int) {
 	ms := MapSuccess{
-		WorkerID: jobID,
-		TaskID:   taskID,
-		Onames:   onames,
+		TaskID: taskID,
+		Onames: onames,
 	}
 	call("Master.MapSuccess", &ms, &Nil{})
 }
 
-func sendReduceSuccess(oname string, jobID, taskID int) {
+func sendReduceSuccess(oname string, taskID int) {
 	rs := ReduceSuccess{
-		WorkerID: jobID,
-		TaskID:   taskID,
-		Oname:    oname,
+		TaskID: taskID,
+		Oname:  oname,
 	}
 	call("Master.ReduceSuccess", &rs, &Nil{})
 }
@@ -121,27 +114,4 @@ func call(rpcname string, args interface{}, reply interface{}) bool {
 
 	log.Printf("could not call %v, err: %v\n", rpcname, err)
 	return false
-}
-
-//
-// CallExample example function to show how to make an RPC call to the master.
-//
-// the RPC argument and reply types are defined in rpc.go.
-//
-func CallExample() {
-
-	// declare an argument structure.
-	args := ExampleArgs{}
-
-	// fill in the argument(s).
-	args.X = 99
-
-	// declare a reply structure.
-	reply := ExampleReply{}
-
-	// send the RPC request, wait for the reply.
-	call("Master.Example", &args, &reply)
-
-	// reply.Y should be 100.
-	fmt.Printf("reply.Y %v\n", reply.Y)
 }

@@ -41,27 +41,24 @@ type Task struct {
 
 // TaskFail ...
 type TaskFail struct {
-	WorkerID int
-	TaskID   int
+	TaskID int
 }
 
 // MapSuccess ...
 type MapSuccess struct {
-	TaskID   int
-	WorkerID int
-	Onames   []string
+	TaskID int
+	Onames []string
 }
 
 // ReduceSuccess ...
 type ReduceSuccess struct {
-	TaskID   int
-	WorkerID int
-	Oname    string
+	TaskID int
+	Oname  string
 }
 
 // Nil ...
 type Nil struct {
-	Deliver bool
+	Delivered bool
 }
 
 // Cook up a unique-ish UNIX-domain socket name

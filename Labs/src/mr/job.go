@@ -24,7 +24,6 @@ func (a ByKey) Less(i, j int) bool { return a[i].Key < a[j].Key }
 
 // Job ...
 type Job struct {
-	id      int
 	nReduce int
 	mapf    func(string, string) []KeyValue
 	reducef func(string, []string) string
