@@ -11,52 +11,44 @@ import (
 	"strconv"
 )
 
-// Enum for functions
-const (
-	Map    = iota
-	Reduce = iota
-	Wait   = iota
-	Exit   = iota
-)
-
-// TaskCategory is enum for differentating between tasks
-type TaskCategory int
-
 // WorkerInfo is used for sending master
 type WorkerInfo struct {
 	ID int
 }
 
-// MasterInfo is used in RPC HandSake
+// MasterInfo is used in RPC HandSake.
+// nReduce is returned to workers
 type MasterInfo struct {
 	NReduce int
 }
 
-// Task is what is sent as reply from RPC to workers
+// Task is what is sent as reply via rpc from master to workers
+// Iname - task input file name
 type Task struct {
 	ID       int
 	Iname    string
+	NReduce  int
 	Category TaskCategory
 }
 
-// TaskFail ...
+// TaskFail sent from worker to notify master about fail
 type TaskFail struct {
 	TaskID int
 }
 
-// MapSuccess ...
+// MapSuccess sent from worker to notify master MapTask success
 type MapSuccess struct {
 	TaskID int
 	Onames []string
 }
 
-// ReduceSuccess ...
+// ReduceSuccess sent from worker to notify master ReduceTask success
 type ReduceSuccess struct {
 	TaskID int
 	Oname  string
 }
 
-// Nil ...
+// Nil used to satisfy rpc interface to send dummy vars
 type Nil struct {
 	Delivered bool
 }
@@ -69,14 +61,4 @@ func masterSock() string {
 	s := "/var/tmp/824-mr-"
 	s += strconv.Itoa(os.Getuid())
 	return s
-}
-
-// ExampleArgs ...
-type ExampleArgs struct {
-	X int
-}
-
-// ExampleReply ...
-type ExampleReply struct {
-	Y int
 }

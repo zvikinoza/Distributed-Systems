@@ -1,5 +1,9 @@
 package mr
 
+// Job is responsible for competeing
+// map or reduce tasks and returning appropriate
+// error or success
+
 import (
 	"encoding/json"
 	"fmt"
@@ -7,11 +11,6 @@ import (
 	"io/ioutil"
 	"os"
 	"sort"
-	"strconv"
-)
-
-const (
-	reduceOutputBase = "mr-out-"
 )
 
 // ByKey for sorting by key.
@@ -22,13 +21,15 @@ func (a ByKey) Len() int           { return len(a) }
 func (a ByKey) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a ByKey) Less(i, j int) bool { return a[i].Key < a[j].Key }
 
-// Job ...
+// Job is usesd by worker to do Task
 type Job struct {
-	nReduce int
 	mapf    func(string, string) []KeyValue
 	reducef func(string, []string) string
 }
 
+// Does Map Task with i/o
+// reads input from files
+// runs map functions
 // writes output sorted by keys in each readuce file
 func (job *Job) runMap(task Task) ([]string, error) {
 
@@ -42,7 +43,7 @@ func (job *Job) runMap(task Task) ([]string, error) {
 	intermediate := job.mapf(task.Iname, contents)
 
 	// wirite intermediate output in files
-	onames, err := writeMapOutput(intermediate, task.ID, job.nReduce)
+	onames, err := writeMapOutput(intermediate, task.ID, task.NReduce)
 	if err != nil {
 		return []string{}, err
 	}
@@ -50,10 +51,10 @@ func (job *Job) runMap(task Task) ([]string, error) {
 	return onames, nil
 }
 
+// Does Reduce Task with i/o
 // reduce file should be sorted and merged with same bucket
 func (job *Job) runReduce(task Task) (string, error) {
-
-	oname := reduceOutputBase + strconv.Itoa(task.ID)
+	oname := getFinalFilename(task.ID)
 
 	// read intermediate file
 	intermediate, err := readReduceInput(task.Iname)
@@ -94,7 +95,6 @@ func readMapInput(filename string) (string, error) {
 }
 
 func readReduceInput(filename string) ([]KeyValue, error) {
-
 	ifile, err := os.Open(filename)
 	if err != nil {
 		return []KeyValue{}, err
@@ -118,14 +118,15 @@ func readReduceInput(filename string) ([]KeyValue, error) {
 	return intermediate, nil
 }
 
+// writes map outputs in nReduce files.
+// Keys are distributed in files by hash(taskID)%nReduce
 func writeMapOutput(intermediate []KeyValue, taskID, nReduce int) ([]string, error) {
 	// create intermediate output files
 	onames := make([]string, nReduce)
 	encoders := make([]*json.Encoder, nReduce)
-	fileNameBase := "mr-" + strconv.Itoa(taskID) + "-"
 
 	for i := 0; i < nReduce; i++ {
-		oname := fileNameBase + strconv.Itoa(i)
+		oname := getMapOutputFilename(taskID, i)
 		file, err := os.Create(oname)
 		if err != nil {
 			return []string{}, err
@@ -147,6 +148,7 @@ func writeMapOutput(intermediate []KeyValue, taskID, nReduce int) ([]string, err
 	return onames, nil
 }
 
+// Same as in mrsequential.go
 func writeReduceOutput(intermediate []KeyValue, ofile *os.File,
 	reducef func(string, []string) string) error {
 	i := 0

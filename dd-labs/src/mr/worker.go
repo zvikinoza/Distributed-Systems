@@ -1,11 +1,17 @@
 package mr
 
+// Worker is responsible for communication
+// betweeen master and job, it just recieves tasks
+// and sends success to master.
+
 import (
 	"hash/fnv"
-	"log"
 	"net/rpc"
+	"os"
 	"time"
 )
+
+const workerTaskWaitTime = 3
 
 //
 // KeyValue Map functions return a slice of KeyValue.
@@ -31,19 +37,18 @@ func ihash(key string) int {
 func Worker(mapf func(string, string) []KeyValue,
 	reducef func(string, []string) string) {
 
-	job := setupJob(mapf, reducef)
+	job := Job{mapf: mapf, reducef: reducef}
 
 	for {
 		task := Task{}
 		var err error
 
 		call("Master.GetTask", &Nil{}, &task)
-
 		switch task.Category {
 		case Exit:
 			return
 		case Wait:
-			time.Sleep(8 * time.Second)
+			time.Sleep(workerTaskWaitTime * time.Second)
 			continue
 		case Map:
 			onames, err := job.runMap(task)
@@ -58,22 +63,8 @@ func Worker(mapf func(string, string) []KeyValue,
 		}
 
 		if err != nil {
-			call("Master.TaskFail", &task, &Nil{})
-			log.Printf("could not run: %+v, err: %v\n", task, err)
+			// call("Master.TaskFail", &task, &Nil{})
 		}
-	}
-}
-
-func setupJob(mapf func(string, string) []KeyValue,
-	reducef func(string, []string) string) *Job {
-
-	mi := MasterInfo{}
-	call("Master.HandShake", &Nil{}, &mi)
-
-	return &Job{
-		nReduce: mi.NReduce,
-		mapf:    mapf,
-		reducef: reducef,
 	}
 }
 
@@ -103,7 +94,8 @@ func call(rpcname string, args interface{}, reply interface{}) bool {
 	sockname := masterSock()
 	c, err := rpc.DialHTTP("unix", sockname)
 	if err != nil {
-		log.Fatal("dialing:", err)
+		// log.Fatal("Worker dialing:", err)
+		os.Exit(1)
 	}
 	defer c.Close()
 
@@ -112,6 +104,5 @@ func call(rpcname string, args interface{}, reply interface{}) bool {
 		return true
 	}
 
-	log.Printf("could not call %v, err: %v\n", rpcname, err)
 	return false
 }

@@ -6,18 +6,15 @@ package main
 // go run mrsequential.go wc.so pg*.txt
 //
 
-import (
-	"fmt"
-	"io/ioutil"
-	"log"
-	"os"
-	"plugin"
-	"sort"
+import "fmt"
+import "../mr"
+import "plugin"
+import "os"
+import "log"
+import "io/ioutil"
+import "sort"
 
-	"../mr"
-)
-
-// ByKey for sorting by key.
+// for sorting by key.
 type ByKey []mr.KeyValue
 
 // for sorting by key.
