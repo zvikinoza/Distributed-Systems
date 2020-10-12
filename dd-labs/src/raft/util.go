@@ -1,13 +1,21 @@
 package raft
 
-import "log"
+import (
+	"fmt"
+	"sync"
+	"time"
+)
 
 // Debugging
-const Debug = 0
+const Debug = 1
+
+var mu sync.Mutex
 
 func DPrintf(format string, a ...interface{}) (n int, err error) {
+	mu.Lock()
+	defer mu.Unlock()
 	if Debug > 0 {
-		log.Printf(format, a...)
+		fmt.Println(fmt.Sprintf("%v|%s", time.Now().UnixNano(), fmt.Sprintf(format, a...)))
 	}
 	return
 }

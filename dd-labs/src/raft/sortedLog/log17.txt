@@ -1,0 +1,2387 @@
+1602533320665259000|0: Disconnecting
+1602533320665428000|0 (0):: start sleeping
+1602533320665528000|1: Disconnecting
+1602533320665637000|1 (0):: start sleeping
+1602533320665680000|2: Disconnecting
+1602533320665726000|0: Connecting
+1602533320665765000|1: Connecting
+1602533320665782000|2: Connecting
+1602533320665799000|Test (2A): initial election ...
+1602533320665799000|
+1602533320665815000|2 (0):: start sleeping
+1602533320842214000|1 (0):: end sleeping
+1602533320842310000|1 (0):: becoming candidate
+1602533320842342000|1 (1):: Starting election. term: 1
+1602533320842399000|1 (1):: requesting vote from 0
+1602533320842488000|1 (1):: requesting vote from 2
+1602533320842938000|0 (0):: incoming RequestVote, granting. state:2, candidate:1
+1602533320843006000|2 (0):: incoming RequestVote, granting. state:2, candidate:1
+1602533320843111000|1 (1): vote granted, state:1
+1602533320843141000|1 (1):: Majority voted. votesCout: 2
+1602533320843157000|1 (1):: becoming leader
+1602533320843176000|1 (1):: Vote not granted, state:0
+1602533320843414000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320843446000|2 (1):, becoming follower
+1602533320843499000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320843548000|0 (1):, becoming follower
+1602533320854893000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320854975000|2 (1):, becoming follower
+1602533320855021000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320855067000|0 (1):, becoming follower
+1602533320866871000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320866919000|2 (1):, becoming follower
+1602533320866953000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320866983000|0 (1):, becoming follower
+1602533320877053000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320877118000|0 (1):, becoming follower
+1602533320877165000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320877215000|2 (1):, becoming follower
+1602533320885600000|2 (1):: end sleeping
+1602533320885666000|2 (1):: start sleeping
+1602533320887809000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320887862000|2 (1):, becoming follower
+1602533320887913000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320887953000|0 (1):, becoming follower
+1602533320898299000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320898360000|0 (1):, becoming follower
+1602533320898402000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320898438000|2 (1):, becoming follower
+1602533320908534000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320908602000|0 (1):, becoming follower
+1602533320908656000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320908718000|2 (1):, becoming follower
+1602533320918749000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320918893000|2 (1):, becoming follower
+1602533320919033000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320919083000|0 (1):, becoming follower
+1602533320928742000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320928871000|0 (1):, becoming follower
+1602533320928950000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320928985000|2 (1):, becoming follower
+1602533320939266000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320939316000|0 (1):, becoming follower
+1602533320939335000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320939376000|2 (1):, becoming follower
+1602533320941419000|0 (1):: end sleeping
+1602533320941471000|0 (1):: start sleeping
+1602533320950278000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320950339000|2 (1):, becoming follower
+1602533320950370000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320950433000|0 (1):, becoming follower
+1602533320961090000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320961149000|0 (1):, becoming follower
+1602533320961196000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320961285000|2 (1):, becoming follower
+1602533320971398000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320971448000|2 (1):, becoming follower
+1602533320971493000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320971527000|0 (1):, becoming follower
+1602533320981524000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320981578000|2 (1):, becoming follower
+1602533320981620000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320981657000|0 (1):, becoming follower
+1602533320991675000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320991742000|0 (1):, becoming follower
+1602533320991787000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533320991829000|2 (1):, becoming follower
+1602533321001666000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321001718000|0 (1):, becoming follower
+1602533321001761000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321001790000|2 (1):, becoming follower
+1602533321013548000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321013645000|2 (1):, becoming follower
+1602533321013736000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321013778000|0 (1):, becoming follower
+1602533321023568000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321023625000|2 (1):, becoming follower
+1602533321023672000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321023713000|0 (1):, becoming follower
+1602533321034274000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321034329000|2 (1):, becoming follower
+1602533321034371000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321034409000|0 (1):, becoming follower
+1602533321045121000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321045179000|2 (1):, becoming follower
+1602533321045201000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321045235000|0 (1):, becoming follower
+1602533321055318000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321055368000|2 (1):, becoming follower
+1602533321055413000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321055444000|0 (1):, becoming follower
+1602533321063817000|2 (1):: end sleeping
+1602533321063859000|2 (1):: start sleeping
+1602533321065666000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321065695000|2 (1):, becoming follower
+1602533321065707000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321065722000|0 (1):, becoming follower
+1602533321075811000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321075891000|2 (1):, becoming follower
+1602533321075935000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321075957000|0 (1):, becoming follower
+1602533321085985000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321086070000|2 (1):, becoming follower
+1602533321086107000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321086147000|0 (1):, becoming follower
+1602533321096039000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321096093000|0 (1):, becoming follower
+1602533321096125000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321096156000|2 (1):, becoming follower
+1602533321107580000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321107640000|0 (1):, becoming follower
+1602533321107657000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321107697000|2 (1):, becoming follower
+1602533321109799000|0 (1):: end sleeping
+1602533321109878000|0 (1):: start sleeping
+1602533321117676000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321117762000|0 (1):, becoming follower
+1602533321117865000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321117896000|2 (1):, becoming follower
+1602533321127818000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321127873000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321127949000|0 (1):, becoming follower
+1602533321127985000|2 (1):, becoming follower
+1602533321138447000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321138501000|0 (1):, becoming follower
+1602533321138518000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321138562000|2 (1):, becoming follower
+1602533321148474000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321148522000|0 (1):, becoming follower
+1602533321148535000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321148561000|2 (1):, becoming follower
+1602533321159198000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321159253000|0 (1):, becoming follower
+1602533321159282000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321159343000|2 (1):, becoming follower
+1602533321169444000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321169490000|0 (1):, becoming follower
+1602533321169517000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321169539000|2 (1):, becoming follower
+1602533321181864000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321181936000|0 (1):, becoming follower
+1602533321182026000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321182061000|2 (1):, becoming follower
+1602533321193404000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321193466000|2 (1):, becoming follower
+1602533321193503000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321193539000|0 (1):, becoming follower
+1602533321205354000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321205430000|0 (1):, becoming follower
+1602533321205454000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321205510000|2 (1):, becoming follower
+1602533321216923000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321216984000|2 (1):, becoming follower
+1602533321217013000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321217047000|0 (1):, becoming follower
+1602533321228361000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321228406000|2 (1):, becoming follower
+1602533321228418000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321228448000|0 (1):, becoming follower
+1602533321238787000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321238868000|0 (1):, becoming follower
+1602533321238927000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321238966000|2 (1):, becoming follower
+1602533321250365000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321250435000|2 (1):, becoming follower
+1602533321250496000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321250524000|0 (1):, becoming follower
+1602533321260427000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321260470000|0 (1):, becoming follower
+1602533321260494000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321260516000|2 (1):, becoming follower
+1602533321270728000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321270816000|2 (1):, becoming follower
+1602533321270874000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321270929000|0 (1):, becoming follower
+1602533321281834000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321281905000|2 (1):, becoming follower
+1602533321281957000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321281993000|0 (1):, becoming follower
+1602533321294243000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321294326000|2 (1):, becoming follower
+1602533321294388000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321294448000|0 (1):, becoming follower
+1602533321304763000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321304854000|0 (1):, becoming follower
+1602533321304919000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321305013000|2 (1):, becoming follower
+1602533321315148000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321315224000|0 (1):, becoming follower
+1602533321315297000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321315374000|2 (1):, becoming follower
+1602533321326161000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321326219000|2 (1):, becoming follower
+1602533321326266000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321326301000|0 (1):, becoming follower
+1602533321336522000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321336600000|0 (1):, becoming follower
+1602533321336675000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321336728000|2 (1):, becoming follower
+1602533321348818000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321348894000|0 (1):, becoming follower
+1602533321348923000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321348980000|2 (1):, becoming follower
+1602533321354080000|2 (1):: end sleeping
+1602533321354167000|2 (1):: start sleeping
+1602533321359585000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321359666000|0 (1):, becoming follower
+1602533321359715000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321359774000|2 (1):, becoming follower
+1602533321372193000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321372273000|2 (1):, becoming follower
+1602533321372347000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321372406000|0 (1):, becoming follower
+1602533321382431000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321382540000|0 (1):, becoming follower
+1602533321382614000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321382677000|2 (1):, becoming follower
+1602533321393623000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321393684000|2 (1):, becoming follower
+1602533321393783000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321393831000|0 (1):, becoming follower
+1602533321395192000|0 (1):: end sleeping
+1602533321395249000|0 (1):: start sleeping
+1602533321405898000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321405994000|2 (1):, becoming follower
+1602533321406086000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321406160000|0 (1):, becoming follower
+1602533321416532000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321416601000|2 (1):, becoming follower
+1602533321416671000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321416715000|0 (1):, becoming follower
+1602533321427601000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321427704000|2 (1):, becoming follower
+1602533321427802000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321427869000|0 (1):, becoming follower
+1602533321438435000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321438517000|2 (1):, becoming follower
+1602533321438586000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321438645000|0 (1):, becoming follower
+1602533321449984000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321450048000|2 (1):, becoming follower
+1602533321450091000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321450162000|0 (1):, becoming follower
+1602533321462386000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321462515000|2 (1):, becoming follower
+1602533321462614000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321462679000|0 (1):, becoming follower
+1602533321472958000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321473055000|2 (1):, becoming follower
+1602533321473136000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321473199000|0 (1):, becoming follower
+1602533321485432000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321485525000|2 (1):, becoming follower
+1602533321485668000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321485724000|0 (1):, becoming follower
+1602533321498108000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321498168000|0 (1):, becoming follower
+1602533321498184000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321498220000|2 (1):, becoming follower
+1602533321509375000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321509463000|2 (1):, becoming follower
+1602533321509490000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321509542000|0 (1):, becoming follower
+1602533321519652000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321519731000|2 (1):, becoming follower
+1602533321519801000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321519856000|0 (1):, becoming follower
+1602533321532833000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321532914000|0 (1):, becoming follower
+1602533321532997000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321533052000|2 (1):, becoming follower
+1602533321543009000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321543092000|2 (1):, becoming follower
+1602533321543126000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321543193000|0 (1):, becoming follower
+1602533321553859000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321553942000|0 (1):, becoming follower
+1602533321554023000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321554082000|2 (1):, becoming follower
+1602533321564071000|0 (1):: end sleeping
+1602533321564168000|0 (1):: start sleeping
+1602533321564428000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321564501000|2 (1):, becoming follower
+1602533321564524000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321564586000|0 (1):, becoming follower
+1602533321574649000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321574719000|2 (1):, becoming follower
+1602533321574758000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321574815000|0 (1):, becoming follower
+1602533321585675000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321585740000|0 (1):, becoming follower
+1602533321585760000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321585800000|2 (1):, becoming follower
+1602533321596936000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321597017000|0 (1):, becoming follower
+1602533321597102000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321597155000|2 (1):, becoming follower
+1602533321597285000|2 (1):: end sleeping
+1602533321597338000|2 (1):: start sleeping
+1602533321607138000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321607213000|2 (1):, becoming follower
+1602533321607293000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321607346000|0 (1):, becoming follower
+1602533321618214000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321618301000|2 (1):, becoming follower
+1602533321618387000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321618446000|0 (1):, becoming follower
+1602533321630141000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321630226000|0 (1):, becoming follower
+1602533321630263000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321630345000|2 (1):, becoming follower
+1602533321640505000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321640587000|2 (1):, becoming follower
+1602533321640658000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321640717000|0 (1):, becoming follower
+1602533321653177000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321653266000|0 (1):, becoming follower
+1602533321653343000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321653398000|2 (1):, becoming follower
+1602533321665785000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321665910000|0 (1):, becoming follower
+1602533321665958000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321666072000|2 (1):, becoming follower
+1602533321678456000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321678601000|0 (1):, becoming follower
+1602533321678659000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321678725000|2 (1):, becoming follower
+1602533321688978000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321689054000|0 (1):, becoming follower
+1602533321689080000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321689135000|2 (1):, becoming follower
+1602533321700432000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321700517000|0 (1):, becoming follower
+1602533321700558000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321700644000|2 (1):, becoming follower
+1602533321710934000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321710999000|2 (1):, becoming follower
+1602533321711085000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321711133000|0 (1):, becoming follower
+1602533321721499000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321721557000|0 (1):, becoming follower
+1602533321721602000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321721658000|2 (1):, becoming follower
+1602533321731883000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321731942000|2 (1):, becoming follower
+1602533321732029000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321732081000|0 (1):, becoming follower
+1602533321742105000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321742188000|2 (1):, becoming follower
+1602533321742262000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321742326000|0 (1):, becoming follower
+1602533321747368000|0 (1):: end sleeping
+1602533321747455000|0 (1):: start sleeping
+1602533321753004000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321753090000|0 (1):, becoming follower
+1602533321753130000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321753178000|2 (1):, becoming follower
+1602533321763257000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321763342000|0 (1):, becoming follower
+1602533321763373000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321763450000|2 (1):, becoming follower
+1602533321775937000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321776032000|2 (1):, becoming follower
+1602533321776125000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321776178000|0 (1):, becoming follower
+1602533321787319000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321787403000|2 (1):, becoming follower
+1602533321787430000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321787490000|0 (1):, becoming follower
+1602533321797543000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321797621000|0 (1):, becoming follower
+1602533321797697000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321797750000|2 (1):, becoming follower
+1602533321808396000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321808483000|0 (1):, becoming follower
+1602533321808513000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321808586000|2 (1):, becoming follower
+1602533321818946000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321819028000|0 (1):, becoming follower
+1602533321819105000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321819163000|2 (1):, becoming follower
+1602533321829097000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321829164000|2 (1):, becoming follower
+1602533321829225000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321829274000|0 (1):, becoming follower
+1602533321839294000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321839391000|0 (1):, becoming follower
+1602533321839422000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321839507000|2 (1):, becoming follower
+1602533321848568000|2 (1):: end sleeping
+1602533321848619000|2 (1):: start sleeping
+1602533321849701000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321849756000|0 (1):, becoming follower
+1602533321849810000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321849841000|2 (1):, becoming follower
+1602533321862012000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321862080000|2 (1):, becoming follower
+1602533321862101000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321862138000|0 (1):, becoming follower
+1602533321873067000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321873165000|0 (1):, becoming follower
+1602533321873222000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321873255000|2 (1):, becoming follower
+1602533321883063000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321883117000|0 (1):, becoming follower
+1602533321883147000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321883170000|2 (1):, becoming follower
+1602533321895242000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321895316000|0 (1):, becoming follower
+1602533321895368000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321895420000|2 (1):, becoming follower
+1602533321905462000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321905519000|2 (1):, becoming follower
+1602533321905562000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321905601000|0 (1):, becoming follower
+1602533321915921000|0 (1):: end sleeping
+1602533321915972000|0 (1):: start sleeping
+1602533321916238000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321916322000|2 (1):, becoming follower
+1602533321916348000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321916379000|0 (1):, becoming follower
+1602533321926505000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321926593000|0 (1):, becoming follower
+1602533321926726000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321926850000|2 (1):, becoming follower
+1602533321937431000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321937506000|2 (1):, becoming follower
+1602533321937528000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321937583000|0 (1):, becoming follower
+1602533321948532000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321948616000|2 (1):, becoming follower
+1602533321948688000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321948744000|0 (1):, becoming follower
+1602533321960797000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321960876000|2 (1):, becoming follower
+1602533321960952000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321961005000|0 (1):, becoming follower
+1602533321973051000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321973141000|0 (1):, becoming follower
+1602533321973230000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321973284000|2 (1):, becoming follower
+1602533321983403000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321983490000|0 (1):, becoming follower
+1602533321983569000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321983629000|2 (1):, becoming follower
+1602533321993635000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321993686000|2 (1):, becoming follower
+1602533321993709000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533321993757000|0 (1):, becoming follower
+1602533322004843000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322004923000|2 (1):, becoming follower
+1602533322004979000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322005031000|0 (1):, becoming follower
+1602533322014991000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322015044000|2 (1):, becoming follower
+1602533322015128000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322015179000|0 (1):, becoming follower
+1602533322027700000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322027786000|0 (1):, becoming follower
+1602533322027867000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322027922000|2 (1):, becoming follower
+1602533322039782000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322039868000|0 (1):, becoming follower
+1602533322039951000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322040001000|2 (1):, becoming follower
+1602533322052160000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322052242000|2 (1):, becoming follower
+1602533322052304000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322052363000|0 (1):, becoming follower
+1602533322063797000|2 (1):: end sleeping
+1602533322063920000|2 (1):: start sleeping
+1602533322064156000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322064221000|0 (1):, becoming follower
+1602533322064247000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322064306000|2 (1):, becoming follower
+1602533322076763000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322076851000|0 (1):, becoming follower
+1602533322076875000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322076946000|2 (1):, becoming follower
+1602533322089410000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322089503000|0 (1):, becoming follower
+1602533322089540000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322089608000|2 (1):, becoming follower
+1602533322100459000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322100544000|0 (1):, becoming follower
+1602533322100602000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322100659000|2 (1):, becoming follower
+1602533322111496000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322111582000|0 (1):, becoming follower
+1602533322111665000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322111724000|2 (1):, becoming follower
+1602533322124123000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322124207000|2 (1):, becoming follower
+1602533322124282000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322124346000|0 (1):, becoming follower
+1602533322133507000|0 (1):: end sleeping
+1602533322133611000|0 (1):: start sleeping
+1602533322134394000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322134480000|0 (1):, becoming follower
+1602533322134535000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322134590000|2 (1):, becoming follower
+1602533322145506000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322145590000|0 (1):, becoming follower
+1602533322145626000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322145685000|2 (1):, becoming follower
+1602533322158225000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322158312000|2 (1):, becoming follower
+1602533322158397000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322158454000|0 (1):, becoming follower
+1602533322168373000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322168458000|0 (1):, becoming follower
+1602533322168543000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322168594000|2 (1):, becoming follower
+1602533322181032000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322181117000|0 (1):, becoming follower
+1602533322181200000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322181263000|2 (1):, becoming follower
+1602533322191623000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322191713000|2 (1):, becoming follower
+1602533322191791000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322191890000|0 (1):, becoming follower
+1602533322201763000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322201849000|0 (1):, becoming follower
+1602533322201934000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322201986000|2 (1):, becoming follower
+1602533322214394000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322214481000|0 (1):, becoming follower
+1602533322214571000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322214629000|2 (1):, becoming follower
+1602533322224941000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322225028000|0 (1):, becoming follower
+1602533322225117000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322225175000|2 (1):, becoming follower
+1602533322235093000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322235182000|0 (1):, becoming follower
+1602533322235274000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322235327000|2 (1):, becoming follower
+1602533322247713000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322247795000|0 (1):, becoming follower
+1602533322247840000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322247894000|2 (1):, becoming follower
+1602533322260450000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322260609000|2 (1):, becoming follower
+1602533322260748000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322260815000|0 (1):, becoming follower
+1602533322270641000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322270717000|0 (1):, becoming follower
+1602533322270790000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322270844000|2 (1):, becoming follower
+1602533322278790000|2 (1):: end sleeping
+1602533322278881000|2 (1):: start sleeping
+1602533322282215000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322282268000|0 (1):, becoming follower
+1602533322282371000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322282428000|2 (1):, becoming follower
+1602533322293401000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322293455000|0 (1):, becoming follower
+1602533322293478000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322293525000|2 (1):, becoming follower
+1602533322305975000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322306034000|0 (1):, becoming follower
+1602533322306060000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322306108000|2 (1):, becoming follower
+1602533322316541000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322316591000|2 (1):, becoming follower
+1602533322316613000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322316658000|0 (1):, becoming follower
+1602533322327419000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322327502000|2 (1):, becoming follower
+1602533322327581000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322327631000|0 (1):, becoming follower
+1602533322339810000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322339899000|0 (1):, becoming follower
+1602533322339922000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322339979000|2 (1):, becoming follower
+1602533322350134000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322350220000|0 (1):, becoming follower
+1602533322350303000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322350356000|2 (1):, becoming follower
+1602533322362785000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322362869000|2 (1):, becoming follower
+1602533322362948000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322363005000|0 (1):, becoming follower
+1602533322372856000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322372944000|0 (1):, becoming follower
+1602533322372981000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322373080000|2 (1):, becoming follower
+1602533322384914000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322384994000|2 (1):, becoming follower
+1602533322385065000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322385120000|0 (1):, becoming follower
+1602533322395773000|0 (1):: end sleeping
+1602533322395851000|0 (1):: start sleeping
+1602533322395912000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322395979000|0 (1):, becoming follower
+1602533322396008000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322396036000|2 (1):, becoming follower
+1602533322407059000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322407139000|2 (1):, becoming follower
+1602533322407197000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322407250000|0 (1):, becoming follower
+1602533322418737000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322418824000|2 (1):, becoming follower
+1602533322418903000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322418959000|0 (1):, becoming follower
+1602533322431445000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322431555000|2 (1):, becoming follower
+1602533322431684000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322431763000|0 (1):, becoming follower
+1602533322441790000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322441856000|2 (1):, becoming follower
+1602533322441917000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322441957000|0 (1):, becoming follower
+1602533322452636000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322452717000|0 (1):, becoming follower
+1602533322452787000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322452841000|2 (1):, becoming follower
+1602533322465296000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322465381000|2 (1):, becoming follower
+1602533322465461000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322465517000|0 (1):, becoming follower
+1602533322477093000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322477173000|2 (1):, becoming follower
+1602533322477243000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322477298000|0 (1):, becoming follower
+1602533322487723000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322487808000|0 (1):, becoming follower
+1602533322487896000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322487951000|2 (1):, becoming follower
+1602533322498306000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322498396000|2 (1):, becoming follower
+1602533322498477000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322498532000|0 (1):, becoming follower
+1602533322510942000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322511028000|2 (1):, becoming follower
+1602533322511107000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322511168000|0 (1):, becoming follower
+1602533322519092000|2 (1):: end sleeping
+1602533322519182000|2 (1):: start sleeping
+1602533322521474000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322521517000|2 (1):, becoming follower
+1602533322521535000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322521578000|0 (1):, becoming follower
+1602533322533783000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322533875000|2 (1):, becoming follower
+1602533322533972000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322534036000|0 (1):, becoming follower
+1602533322544855000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322544940000|0 (1):, becoming follower
+1602533322544999000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322545054000|2 (1):, becoming follower
+1602533322554887000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322554970000|2 (1):, becoming follower
+1602533322555046000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322555110000|0 (1):, becoming follower
+1602533322567064000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322567160000|0 (1):, becoming follower
+1602533322567233000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322567318000|2 (1):, becoming follower
+1602533322577277000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322577364000|0 (1):, becoming follower
+1602533322577390000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322577476000|2 (1):, becoming follower
+1602533322589081000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322589159000|2 (1):, becoming follower
+1602533322589187000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322589308000|0 (1):, becoming follower
+1602533322600358000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322600422000|2 (1):, becoming follower
+1602533322600471000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322600525000|0 (1):, becoming follower
+1602533322612089000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322612154000|0 (1):, becoming follower
+1602533322612226000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322612274000|2 (1):, becoming follower
+1602533322618942000|0 (1):: end sleeping
+1602533322619002000|0 (1):: start sleeping
+1602533322622533000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322622622000|0 (1):, becoming follower
+1602533322622698000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322622752000|2 (1):, becoming follower
+1602533322635170000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322635248000|0 (1):, becoming follower
+1602533322635298000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322635355000|2 (1):, becoming follower
+1602533322646997000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322647086000|2 (1):, becoming follower
+1602533322647161000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322647223000|0 (1):, becoming follower
+1602533322657444000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322657529000|2 (1):, becoming follower
+1602533322657612000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322657669000|0 (1):, becoming follower
+1602533322668192000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322668280000|2 (1):, becoming follower
+1602533322668368000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322668426000|0 (1):, becoming follower
+1602533322681887000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322681974000|2 (1):, becoming follower
+1602533322682058000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322682116000|0 (1):, becoming follower
+1602533322692021000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322692125000|2 (1):, becoming follower
+1602533322692187000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322692228000|0 (1):, becoming follower
+1602533322702997000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322703086000|0 (1):, becoming follower
+1602533322703128000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322703178000|2 (1):, becoming follower
+1602533322714116000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322714200000|0 (1):, becoming follower
+1602533322714276000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322714340000|2 (1):, becoming follower
+1602533322718609000|2 (1):: end sleeping
+1602533322718701000|2 (1):: start sleeping
+1602533322726088000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322726176000|0 (1):, becoming follower
+1602533322726248000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322726313000|2 (1):, becoming follower
+1602533322737713000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322737843000|0 (1):, becoming follower
+1602533322737926000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322737988000|2 (1):, becoming follower
+1602533322749551000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322749638000|2 (1):, becoming follower
+1602533322749709000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322749801000|0 (1):, becoming follower
+1602533322760076000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322760165000|2 (1):, becoming follower
+1602533322760243000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322760304000|0 (1):, becoming follower
+1602533322772720000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322772799000|2 (1):, becoming follower
+1602533322772818000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322772876000|0 (1):, becoming follower
+1602533322785509000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322785597000|2 (1):, becoming follower
+1602533322785676000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322785739000|0 (1):, becoming follower
+1602533322795940000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322796025000|0 (1):, becoming follower
+1602533322796111000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322796167000|2 (1):, becoming follower
+1602533322806448000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322806534000|2 (1):, becoming follower
+1602533322806613000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322806664000|0 (1):, becoming follower
+1602533322816701000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322816792000|0 (1):, becoming follower
+1602533322816815000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322816875000|2 (1):, becoming follower
+1602533322828750000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322828836000|0 (1):, becoming follower
+1602533322828914000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322828971000|2 (1):, becoming follower
+1602533322842073000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322842157000|0 (1):, becoming follower
+1602533322842231000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322842289000|2 (1):, becoming follower
+1602533322853950000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322854038000|0 (1):, becoming follower
+1602533322854127000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322854183000|2 (1):, becoming follower
+1602533322864686000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322864772000|2 (1):, becoming follower
+1602533322864855000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322864910000|0 (1):, becoming follower
+1602533322877790000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322877881000|0 (1):, becoming follower
+1602533322877956000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322878057000|2 (1):, becoming follower
+1602533322886458000|0 (1):: end sleeping
+1602533322886501000|0 (1):: start sleeping
+1602533322890233000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322890290000|0 (1):, becoming follower
+1602533322890318000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322890374000|2 (1):, becoming follower
+1602533322901279000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322901368000|2 (1):, becoming follower
+1602533322901453000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322901509000|0 (1):, becoming follower
+1602533322911975000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322912023000|2 (1):, becoming follower
+1602533322912046000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322912099000|0 (1):, becoming follower
+1602533322923004000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322923121000|2 (1):, becoming follower
+1602533322923197000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322923256000|0 (1):, becoming follower
+1602533322933539000|2 (1):: end sleeping
+1602533322933634000|2 (1):: start sleeping
+1602533322933877000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322933929000|0 (1):, becoming follower
+1602533322933999000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322934066000|2 (1):, becoming follower
+1602533322946440000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322946522000|0 (1):, becoming follower
+1602533322946571000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322946652000|2 (1):, becoming follower
+1602533322958400000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322958486000|0 (1):, becoming follower
+1602533322958566000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322958622000|2 (1):, becoming follower
+1602533322968602000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322968681000|2 (1):, becoming follower
+1602533322968706000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322968761000|0 (1):, becoming follower
+1602533322981202000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322981301000|0 (1):, becoming follower
+1602533322981380000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322981437000|2 (1):, becoming follower
+1602533322993206000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322993293000|0 (1):, becoming follower
+1602533322993375000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533322993431000|2 (1):, becoming follower
+1602533323003412000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323003497000|2 (1):, becoming follower
+1602533323003577000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323003637000|0 (1):, becoming follower
+1602533323014445000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323014529000|2 (1):, becoming follower
+1602533323014609000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323014666000|0 (1):, becoming follower
+1602533323024973000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323025047000|2 (1):, becoming follower
+1602533323025065000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323025116000|0 (1):, becoming follower
+1602533323035115000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323035201000|2 (1):, becoming follower
+1602533323035271000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323035332000|0 (1):, becoming follower
+1602533323046159000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323046244000|2 (1):, becoming follower
+1602533323046324000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323046381000|0 (1):, becoming follower
+1602533323058345000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323058430000|0 (1):, becoming follower
+1602533323058508000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323058565000|2 (1):, becoming follower
+1602533323060237000|0 (1):: end sleeping
+1602533323060307000|0 (1):: start sleeping
+1602533323070922000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323071006000|2 (1):, becoming follower
+1602533323071065000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323071123000|0 (1):, becoming follower
+1602533323083367000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323083457000|2 (1):, becoming follower
+1602533323083539000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323083591000|0 (1):, becoming follower
+1602533323094146000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323094233000|2 (1):, becoming follower
+1602533323094312000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323094373000|0 (1):, becoming follower
+1602533323104605000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323104693000|2 (1):, becoming follower
+1602533323104772000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323104834000|0 (1):, becoming follower
+1602533323118185000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323118272000|0 (1):, becoming follower
+1602533323118319000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323118416000|2 (1):, becoming follower
+1602533323128597000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323128681000|0 (1):, becoming follower
+1602533323128753000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323128814000|2 (1):, becoming follower
+1602533323138909000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323138994000|0 (1):, becoming follower
+1602533323139084000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323139136000|2 (1):, becoming follower
+1602533323150099000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323150190000|2 (1):, becoming follower
+1602533323150235000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323150296000|0 (1):, becoming follower
+1602533323161123000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323161211000|0 (1):, becoming follower
+1602533323161240000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323161297000|2 (1):, becoming follower
+1602533323173618000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323173703000|2 (1):, becoming follower
+1602533323173773000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323173829000|0 (1):, becoming follower
+1602533323185026000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323185072000|2 (1):, becoming follower
+1602533323185132000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323185182000|0 (1):, becoming follower
+1602533323195247000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323195309000|0 (1):, becoming follower
+1602533323195405000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323195456000|2 (1):, becoming follower
+1602533323205610000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323205655000|2 (1):, becoming follower
+1602533323205698000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323205732000|0 (1):, becoming follower
+1602533323216732000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323216802000|0 (1):, becoming follower
+1602533323216875000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323216923000|2 (1):, becoming follower
+1602533323225127000|2 (1):: end sleeping
+1602533323225215000|2 (1):: start sleeping
+1602533323229430000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323229514000|0 (1):, becoming follower
+1602533323229594000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323229657000|2 (1):, becoming follower
+1602533323239832000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323239912000|0 (1):, becoming follower
+1602533323239991000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323240045000|2 (1):, becoming follower
+1602533323250022000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323250106000|2 (1):, becoming follower
+1602533323250141000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323250199000|0 (1):, becoming follower
+1602533323261491000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323261583000|0 (1):, becoming follower
+1602533323261614000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323261686000|2 (1):, becoming follower
+1602533323273900000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323273982000|2 (1):, becoming follower
+1602533323274067000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323274118000|0 (1):, becoming follower
+1602533323285628000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323285716000|2 (1):, becoming follower
+1602533323285741000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323285800000|0 (1):, becoming follower
+1602533323296613000|0 (1):: end sleeping
+1602533323296678000|0 (1):: start sleeping
+1602533323296733000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323296780000|0 (1):, becoming follower
+1602533323296798000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323296835000|2 (1):, becoming follower
+1602533323307015000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323307088000|2 (1):, becoming follower
+1602533323307116000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323307176000|0 (1):, becoming follower
+1602533323318570000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323318624000|2 (1):, becoming follower
+1602533323318664000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323318712000|0 (1):, becoming follower
+1602533323329748000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323329784000|2 (1):, becoming follower
+1602533323329798000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323329835000|0 (1):, becoming follower
+1602533323339942000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323339995000|2 (1):, becoming follower
+1602533323340019000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323340054000|0 (1):, becoming follower
+1602533323351470000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323351516000|2 (1):, becoming follower
+1602533323351538000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323351589000|0 (1):, becoming follower
+1602533323364075000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323364144000|0 (1):, becoming follower
+1602533323364173000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323364199000|2 (1):, becoming follower
+1602533323375075000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323375134000|2 (1):, becoming follower
+1602533323375193000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323375229000|0 (1):, becoming follower
+1602533323387728000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323387798000|0 (1):, becoming follower
+1602533323387890000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323387937000|2 (1):, becoming follower
+1602533323394202000|2 (1):: end sleeping
+1602533323394289000|2 (1):: start sleeping
+1602533323399466000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323399573000|2 (1):, becoming follower
+1602533323399649000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323399706000|0 (1):, becoming follower
+1602533323412112000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323412198000|2 (1):, becoming follower
+1602533323412280000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323412339000|0 (1):, becoming follower
+1602533323422703000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323422787000|0 (1):, becoming follower
+1602533323422865000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323422921000|2 (1):, becoming follower
+1602533323433906000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323433998000|2 (1):, becoming follower
+1602533323434077000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323434163000|0 (1):, becoming follower
+1602533323444531000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323444592000|2 (1):, becoming follower
+1602533323444673000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323444726000|0 (1):, becoming follower
+1602533323457064000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323457119000|0 (1):, becoming follower
+1602533323457148000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323457247000|2 (1):, becoming follower
+1602533323467142000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323467204000|2 (1):, becoming follower
+1602533323467272000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323467317000|0 (1):, becoming follower
+1602533323477282000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323477329000|0 (1):, becoming follower
+1602533323477391000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323477431000|2 (1):, becoming follower
+1602533323479231000|0 (1):: end sleeping
+1602533323479304000|0 (1):: start sleeping
+1602533323489554000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323489638000|2 (1):, becoming follower
+1602533323489718000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323489772000|0 (1):, becoming follower
+1602533323500507000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323500604000|2 (1):, becoming follower
+1602533323500643000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323500705000|0 (1):, becoming follower
+1602533323511317000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323511404000|2 (1):, becoming follower
+1602533323511491000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323511548000|0 (1):, becoming follower
+1602533323522165000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323522251000|0 (1):, becoming follower
+1602533323522327000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323522381000|2 (1):, becoming follower
+1602533323533832000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323533926000|2 (1):, becoming follower
+1602533323534002000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323534092000|0 (1):, becoming follower
+1602533323546408000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323546475000|0 (1):, becoming follower
+1602533323546547000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323546586000|2 (1):, becoming follower
+1602533323558415000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323558500000|0 (1):, becoming follower
+1602533323558580000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323558641000|2 (1):, becoming follower
+1602533323571000000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323571086000|0 (1):, becoming follower
+1602533323571135000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323571196000|2 (1):, becoming follower
+1602533323573567000|2 (1):: end sleeping
+1602533323573653000|2 (1):: start sleeping
+1602533323583399000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323583483000|2 (1):, becoming follower
+1602533323583580000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323583633000|0 (1):, becoming follower
+1602533323593944000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323594033000|0 (1):, becoming follower
+1602533323594102000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323594158000|2 (1):, becoming follower
+1602533323606509000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323606591000|0 (1):, becoming follower
+1602533323606682000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323606736000|2 (1):, becoming follower
+1602533323616844000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323616929000|0 (1):, becoming follower
+1602533323616961000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323617024000|2 (1):, becoming follower
+1602533323627764000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323627853000|0 (1):, becoming follower
+1602533323627893000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323627955000|2 (1):, becoming follower
+1602533323638435000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323638546000|0 (1):, becoming follower
+1602533323638640000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323638677000|2 (1):, becoming follower
+1602533323650062000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323650138000|2 (1):, becoming follower
+1602533323650169000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323650221000|0 (1):, becoming follower
+1602533323660137000|2 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323660191000|2 (1):, becoming follower
+1602533323660209000|0 (1):: incoming AppendEntry, success. state:2, leaderID:1
+1602533323660251000|0 (1):, becoming follower
+1602533323669602000|  ... Passed --
+1602533323669687000|   3.0  3  506   60734    0
+1602533323669687000|
+1602533323669931000|0: Disconnecting
+1602533323670045000|1: Disconnecting
+1602533323670135000|0 (0):: start sleeping
+1602533323670209000|2: Disconnecting
+1602533323670270000|1 (0):: start sleeping
+1602533323670329000|0: Connecting
+1602533323670356000|1: Connecting
+1602533323670376000|2 (0):: start sleeping
+1602533323670438000|2: Connecting
+1602533323670460000|Test (2A): election after network failure ...
+1602533323670460000|
+1602533323670489000|1 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+1602533323743294000|2 (1):: end sleeping
+1602533323743414000|2 (1):: start sleeping
+1602533323752545000|0 (1):: end sleeping
+1602533323752654000|0 (1):: start sleeping
+1602533323878620000|2 (0):: end sleeping
+1602533323878710000|2 (0):: becoming candidate
+1602533323878759000|2 (1):: Starting election. term: 1
+1602533323878803000|2 (1):: requesting vote from 1
+1602533323878896000|2 (1):: requesting vote from 0
+1602533323879137000|1 (0):: incoming RequestVote, granting. state:2, candidate:2
+1602533323879201000|0 (0):: incoming RequestVote, granting. state:2, candidate:2
+1602533323879297000|2 (1): vote granted, state:1
+1602533323879320000|2 (1):: Majority voted. votesCout: 2
+1602533323879332000|2 (1):: becoming leader
+1602533323879359000|2 (1):: election timeout expired
+1602533323879441000|1 (1):: end sleeping
+1602533323879517000|1 (1):: start sleeping
+1602533323879567000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323879606000|1 (1):, becoming follower
+1602533323879630000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323879681000|0 (1):, becoming follower
+1602533323891672000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323891759000|0 (1):, becoming follower
+1602533323891839000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323891903000|1 (1):, becoming follower
+1602533323901896000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323901980000|1 (1):, becoming follower
+1602533323902059000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323902118000|0 (1):, becoming follower
+1602533323913524000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323913611000|1 (1):, becoming follower
+1602533323913688000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323913744000|0 (1):, becoming follower
+1602533323926076000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323926165000|0 (1):, becoming follower
+1602533323926242000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323926303000|1 (1):, becoming follower
+1602533323938668000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323938755000|0 (1):, becoming follower
+1602533323938836000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323938898000|1 (1):, becoming follower
+1602533323951318000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323951405000|1 (1):, becoming follower
+1602533323951481000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323951537000|0 (1):, becoming follower
+1602533323963323000|0 (1):: end sleeping
+1602533323963431000|0 (1):: start sleeping
+1602533323963648000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323963726000|1 (1):, becoming follower
+1602533323963753000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323963903000|0 (1):, becoming follower
+1602533323973937000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323973997000|0 (1):, becoming follower
+1602533323974058000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323974094000|1 (1):, becoming follower
+1602533323984263000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323984346000|0 (1):, becoming follower
+1602533323984410000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323984475000|1 (1):, becoming follower
+1602533323991351000|2 (1):: end sleeping
+1602533323991410000|2 (1):: becoming candidate
+1602533323991453000|2 (2):: Starting election. term: 2
+1602533323991483000|2 (2):: requesting vote from 1
+1602533323991568000|2 (2):: requesting vote from 0
+1602533323991683000|2 (2):: could not connect to server:1
+1602533323991713000|2 (2):: could not connect to server:0
+1602533323994928000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323994982000|1 (1):, becoming follower
+1602533323995006000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533323995058000|0 (1):, becoming follower
+1602533324002033000|0 (1):: end sleeping
+1602533324002091000|0 (1):: becoming candidate
+1602533324002112000|0 (2):: Starting election. term: 2
+1602533324002146000|0 (2):: requesting vote from 2
+1602533324002229000|0 (2):: requesting vote from 1
+1602533324002357000|0 (2):: could not connect to server:1
+1602533324002388000|0 (2):: could not connect to server:2
+1602533324005906000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324005959000|1 (1):, becoming follower
+1602533324005983000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324006040000|0 (1):, becoming follower
+1602533324015946000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324015998000|1 (1):, becoming follower
+1602533324016047000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324016088000|0 (1):, becoming follower
+1602533324028591000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324028681000|0 (1):, becoming follower
+1602533324028759000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324028815000|1 (1):, becoming follower
+1602533324039939000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324040022000|1 (1):, becoming follower
+1602533324040099000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324040149000|0 (1):, becoming follower
+1602533324050133000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324050228000|0 (1):, becoming follower
+1602533324050259000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324050321000|1 (1):, becoming follower
+1602533324062320000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324062389000|1 (1):, becoming follower
+1602533324062456000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324062496000|0 (1):, becoming follower
+1602533324073090000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324073172000|0 (1):, becoming follower
+1602533324073254000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324073313000|1 (1):, becoming follower
+1602533324085003000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324085090000|0 (1):, becoming follower
+1602533324085159000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324085220000|1 (1):, becoming follower
+1602533324096029000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324096115000|0 (1):, becoming follower
+1602533324096196000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324096254000|1 (1):, becoming follower
+1602533324106286000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324106369000|0 (1):, becoming follower
+1602533324106452000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324106514000|1 (1):, becoming follower
+1602533324118949000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324119030000|0 (1):, becoming follower
+1602533324119114000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324119209000|1 (1):, becoming follower
+1602533324123628000|0 (1):: end sleeping
+1602533324123713000|0 (1):: start sleeping
+1602533324129165000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324129249000|0 (1):, becoming follower
+1602533324129330000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324129395000|1 (1):, becoming follower
+1602533324140511000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324140595000|0 (1):, becoming follower
+1602533324140634000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324140710000|1 (1):, becoming follower
+1602533324152185000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324152272000|0 (1):, becoming follower
+1602533324152356000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324152413000|1 (1):, becoming follower
+1602533324163232000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324163319000|0 (1):, becoming follower
+1602533324163399000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324163455000|1 (1):, becoming follower
+1602533324166888000|1 (1):: end sleeping
+1602533324166988000|1 (1):: start sleeping
+1602533324173619000|2 (2):: election timed out. state:1
+1602533324173710000|2 (3):: Starting election. term: 3
+1602533324173736000|2 (3):: requesting vote from 1
+1602533324173839000|2 (3):: could not connect to server:1
+1602533324173871000|2 (3):: requesting vote from 0
+1602533324173970000|0 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324173996000|2 (3):: could not connect to server:0
+1602533324174027000|0 (1):, becoming follower
+1602533324174087000|1 (1):: incoming AppendEntry, success. state:2, leaderID:2
+1602533324174146000|1 (1):, becoming follower
+1602533324181176000|2 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+1602533324181279000|2: Disconnecting
+1602533324229284000|0 (2):: election timed out. state:1
+1602533324229370000|0 (3):: Starting election. term: 3
+1602533324229403000|0 (3):: requesting vote from 2
+1602533324229452000|0 (3):: requesting vote from 1
+1602533324229618000|0 (3):: could not connect to server:1
+1602533324229660000|0 (3):: could not connect to server:2
+1602533324386510000|0 (3):: election timed out. state:1
+1602533324386601000|0 (4):: Starting election. term: 4
+1602533324386643000|0 (4):: requesting vote from 2
+1602533324386730000|0 (4):: requesting vote from 1
+1602533324386861000|0 (4):: could not connect to server:2
+1602533324386930000|0 (4):: could not connect to server:1
+1602533324386951000|0 (1):: end sleeping
+1602533324386966000|0 (1):: start sleeping
+1602533324424710000|1 (1):: end sleeping
+1602533324424802000|1 (1):: start sleeping
+1602533324468172000|2 (3):: election timed out. state:1
+1602533324468309000|2 (4):: Starting election. term: 4
+1602533324468363000|2 (4):: requesting vote from 1
+1602533324468400000|2 (4):: requesting vote from 0
+1602533324468513000|2 (4):: could not connect to server:1
+1602533324468552000|2 (4):: could not connect to server:0
+1602533324640272000|0 (1):: end sleeping
+1602533324640400000|0 (1):: becoming candidate
+1602533324640488000|0 (2):: Starting election. term: 2
+1602533324640523000|0 (2):: requesting vote from 2
+1602533324640580000|0 (2):: requesting vote from 1
+1602533324640912000|1 (1):: incoming RequestVote, granting. state:2, candidate:0
+1602533324641097000|0 (2): vote granted, state:1
+1602533324641126000|0 (2):: Majority voted. votesCout: 2
+1602533324641144000|0 (2):: becoming leader
+1602533324641396000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324641452000|1 (2):, becoming follower
+1602533324643453000|0 (4):: election timed out. state:1
+1602533324643548000|0 (5):: Starting election. term: 5
+1602533324643591000|0 (5):: requesting vote from 2
+1602533324643680000|0 (5):: requesting vote from 1
+1602533324643813000|0 (5):: could not connect to server:1
+1602533324643845000|0 (5):: could not connect to server:2
+1602533324652144000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324652225000|1 (2):, becoming follower
+1602533324663147000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324663235000|1 (2):, becoming follower
+1602533324665548000|1 (2):: end sleeping
+1602533324665639000|1 (2):: start sleeping
+1602533324673875000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324673956000|1 (2):, becoming follower
+1602533324679719000|3 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+1602533324679809000|2: Connecting
+1602533324684932000|1 (2):: incloming AppendEntry, no success. state:2, leaderID:2
+1602533324685100000|0 (2):: incloming AppendEntry, no success. state:0, leaderID:2
+1602533324685172000|2 (1):, becoming follower
+1602533324685331000|2 (2):, becoming follower
+1602533324686188000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324686275000|1 (2):, becoming follower
+1602533324686351000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324686407000|2 (2):, becoming follower
+1602533324695668000|2 (2):: start sleeping
+1602533324696390000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324696475000|2 (2):, becoming follower
+1602533324696556000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324696614000|1 (2):, becoming follower
+1602533324700217000|2 (4):: election timed out. state:1
+1602533324700315000|2 (5):: Starting election. term: 5
+1602533324700362000|2 (5):: requesting vote from 1
+1602533324700476000|2 (5):: requesting vote from 0
+1602533324700620000|2 (5):: could not connect to server:0
+1602533324700658000|2 (5):: could not connect to server:1
+1602533324707358000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324707426000|1 (2):, becoming follower
+1602533324707457000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324707513000|2 (2):, becoming follower
+1602533324718941000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324719028000|1 (2):, becoming follower
+1602533324719107000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324719168000|2 (2):, becoming follower
+1602533324731601000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324732088000|2 (2):, becoming follower
+1602533324732360000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324732495000|1 (2):, becoming follower
+1602533324742141000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324742208000|1 (2):, becoming follower
+1602533324742273000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324742316000|2 (2):, becoming follower
+1602533324754795000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324754887000|1 (2):, becoming follower
+1602533324754975000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324755030000|2 (2):, becoming follower
+1602533324765483000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324765569000|2 (2):, becoming follower
+1602533324765645000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324765702000|1 (2):, becoming follower
+1602533324778090000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324778173000|2 (2):, becoming follower
+1602533324778244000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324778308000|1 (2):, becoming follower
+1602533324788630000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324788709000|2 (2):, becoming follower
+1602533324788771000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324788824000|1 (2):, becoming follower
+1602533324798772000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324798858000|2 (2):, becoming follower
+1602533324798886000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324798946000|1 (2):, becoming follower
+1602533324808893000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324808976000|2 (2):, becoming follower
+1602533324809059000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324809123000|1 (2):, becoming follower
+1602533324821044000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324821185000|1 (2):, becoming follower
+1602533324821290000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324821362000|2 (2):, becoming follower
+1602533324833482000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324833549000|1 (2):, becoming follower
+1602533324833674000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324833732000|2 (2):, becoming follower
+1602533324843874000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324843934000|2 (2):, becoming follower
+1602533324843958000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324844008000|1 (2):, becoming follower
+1602533324856478000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324856565000|1 (2):, becoming follower
+1602533324856654000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324856710000|2 (2):, becoming follower
+1602533324858056000|2 (5):: election timed out. state:1
+1602533324858152000|2 (6):: Starting election. term: 6
+1602533324858192000|2 (6):: requesting vote from 1
+1602533324858242000|2 (6):: requesting vote from 0
+1602533324858398000|2 (6):: could not connect to server:1
+1602533324858460000|2 (6):: could not connect to server:0
+1602533324867213000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324867308000|1 (2):, becoming follower
+1602533324867398000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324867465000|2 (2):, becoming follower
+1602533324871205000|0 (5):: election timed out. state:1
+1602533324871268000|0 (6):: Starting election. term: 6
+1602533324871301000|0 (6):: requesting vote from 2
+1602533324871344000|0 (6):: requesting vote from 1
+1602533324871477000|0 (6):: could not connect to server:1
+1602533324871508000|0 (6):: could not connect to server:2
+1602533324878805000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324878886000|1 (2):, becoming follower
+1602533324878959000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324879014000|2 (2):, becoming follower
+1602533324891362000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324891434000|2 (2):, becoming follower
+1602533324891497000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324891552000|1 (2):, becoming follower
+1602533324901760000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324901837000|2 (2):, becoming follower
+1602533324901865000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324901921000|1 (2):, becoming follower
+1602533324914380000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324914464000|1 (2):, becoming follower
+1602533324914523000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324914585000|2 (2):, becoming follower
+1602533324924927000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324925009000|1 (2):, becoming follower
+1602533324925084000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324925139000|2 (2):, becoming follower
+1602533324935361000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324935442000|2 (2):, becoming follower
+1602533324935500000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324935559000|1 (2):, becoming follower
+1602533324936147000|1 (2):: end sleeping
+1602533324936230000|1 (2):: start sleeping
+1602533324946195000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324946280000|1 (2):, becoming follower
+1602533324946348000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324946410000|2 (2):, becoming follower
+1602533324958382000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324958462000|1 (2):, becoming follower
+1602533324958498000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324958560000|2 (2):, becoming follower
+1602533324969253000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324969335000|1 (2):, becoming follower
+1602533324969408000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324969459000|2 (2):, becoming follower
+1602533324981467000|2 (2):: end sleeping
+1602533324981617000|2 (2):: start sleeping
+1602533324981786000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324981852000|1 (2):, becoming follower
+1602533324981879000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324981934000|2 (2):, becoming follower
+1602533324991931000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324992024000|1 (2):, becoming follower
+1602533324992121000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533324992180000|2 (2):, becoming follower
+1602533325003438000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325003527000|1 (2):, becoming follower
+1602533325003577000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325003660000|2 (2):, becoming follower
+1602533325014758000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325014842000|2 (2):, becoming follower
+1602533325014871000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325014926000|1 (2):, becoming follower
+1602533325026919000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325026985000|1 (2):, becoming follower
+1602533325027050000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325027096000|2 (2):, becoming follower
+1602533325037852000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325037937000|2 (2):, becoming follower
+1602533325038023000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325038076000|1 (2):, becoming follower
+1602533325047386000|0 (6):: election timed out. state:1
+1602533325047480000|0 (7):: Starting election. term: 7
+1602533325047524000|0 (7):: requesting vote from 2
+1602533325047646000|0 (7):: requesting vote from 1
+1602533325047792000|0 (7):: could not connect to server:1
+1602533325047832000|0 (7):: could not connect to server:2
+1602533325047968000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325048030000|1 (2):, becoming follower
+1602533325048060000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325048125000|2 (2):, becoming follower
+1602533325060503000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325060589000|1 (2):, becoming follower
+1602533325060671000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325060740000|2 (2):, becoming follower
+1602533325071723000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325071807000|2 (2):, becoming follower
+1602533325071889000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325071941000|1 (2):, becoming follower
+1602533325083393000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325083460000|1 (2):, becoming follower
+1602533325083516000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325083560000|2 (2):, becoming follower
+1602533325091436000|2 (6):: election timed out. state:1
+1602533325091531000|2 (7):: Starting election. term: 7
+1602533325091572000|2 (7):: requesting vote from 1
+1602533325091669000|2 (7):: requesting vote from 0
+1602533325091802000|2 (7):: could not connect to server:1
+1602533325091867000|2 (7):: could not connect to server:0
+1602533325093600000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325093687000|1 (2):, becoming follower
+1602533325093763000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325093821000|2 (2):, becoming follower
+1602533325106179000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325106266000|1 (2):, becoming follower
+1602533325106292000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325106356000|2 (2):, becoming follower
+1602533325116368000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325116454000|1 (2):, becoming follower
+1602533325116517000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325116568000|2 (2):, becoming follower
+1602533325121890000|1 (2):: end sleeping
+1602533325121960000|1 (2):: start sleeping
+1602533325126624000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325126680000|2 (2):, becoming follower
+1602533325126727000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325126778000|1 (2):, becoming follower
+1602533325139096000|2 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325139159000|2 (2):, becoming follower
+1602533325139183000|1 (2):: incoming AppendEntry, success. state:2, leaderID:0
+1602533325139234000|1 (2):, becoming follower
+1602533325148938000|4 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+1602533325148981000|0: Disconnecting
+1602533325149003000|1: Disconnecting
+1602533325153893000|2 (2):: end sleeping
+1602533325153934000|2 (2):: start sleeping
+1602533325202264000|0 (7):: election timed out. state:1
+1602533325202361000|0 (8):: Starting election. term: 8
+1602533325202406000|0 (8):: requesting vote from 2
+1602533325202504000|0 (8):: requesting vote from 1
+1602533325202630000|0 (8):: could not connect to server:2
+1602533325202692000|0 (8):: could not connect to server:1
+1602533325362950000|1 (2):: end sleeping
+1602533325363081000|1 (2):: start sleeping
+1602533325363118000|2 (7):: election timed out. state:1
+1602533325363143000|2 (8):: Starting election. term: 8
+1602533325363177000|2 (8):: requesting vote from 1
+1602533325363260000|2 (8):: requesting vote from 0
+1602533325363383000|2 (8):: could not connect to server:0
+1602533325363428000|2 (8):: could not connect to server:1
+1602533325395608000|0 (8):: election timed out. state:1
+1602533325395721000|0 (9):: Starting election. term: 9
+1602533325395813000|0 (9):: requesting vote from 1
+1602533325395931000|0 (9):: requesting vote from 2
+1602533325396066000|0 (9):: could not connect to server:2
+1602533325396092000|0 (9):: could not connect to server:1
+1602533325430602000|2 (2):: end sleeping
+1602533325430699000|2 (2):: becoming candidate
+1602533325430784000|2 (3):: Starting election. term: 3
+1602533325430822000|2 (3):: requesting vote from 1
+1602533325430941000|2 (3):: requesting vote from 0
+1602533325536965000|2 (8):: election timed out. state:1
+1602533325537058000|2 (9):: Starting election. term: 9
+1602533325537097000|2 (9):: requesting vote from 1
+1602533325537201000|2 (9):: requesting vote from 0
+1602533325537322000|2 (9):: could not connect to server:1
+1602533325537381000|2 (9):: could not connect to server:0
+1602533325581292000|1 (2):: end sleeping
+1602533325581377000|1 (2):: becoming candidate
+1602533325581427000|1 (3):: Starting election. term: 3
+1602533325581468000|1 (3):: requesting vote from 2
+1602533325581518000|1 (3):: requesting vote from 0
+1602533325673627000|0 (9):: election timed out. state:1
+1602533325673710000|0 (10):: Starting election. term: 10
+1602533325673740000|0 (10):: requesting vote from 1
+1602533325673870000|0 (10):: requesting vote from 2
+1602533325673991000|0 (10):: could not connect to server:2
+1602533325674065000|0 (10):: could not connect to server:1
+1602533325707005000|2 (3):: election timed out. state:1
+1602533325707074000|2 (4):: Starting election. term: 4
+1602533325707113000|2 (4):: requesting vote from 1
+1602533325707195000|2 (4):: requesting vote from 0
+1602533325718425000|0 (2):: could not connect to server:2
+1602533325763360000|1 (3):: election timed out. state:1
+1602533325763467000|1 (4):: Starting election. term: 4
+1602533325763506000|1 (4):: requesting vote from 2
+1602533325763591000|1 (4):: requesting vote from 0
+1602533325800204000|2 (9):: election timed out. state:1
+1602533325800302000|2 (10):: Starting election. term: 10
+1602533325800344000|2 (10):: requesting vote from 1
+1602533325800403000|2 (10):: requesting vote from 0
+1602533325800470000|2 (10):: could not connect to server:1
+1602533325800513000|2 (10):: could not connect to server:0
+1602533325831871000|0 (10):: election timed out. state:1
+1602533325831959000|0 (11):: Starting election. term: 11
+1602533325832004000|0 (11):: requesting vote from 2
+1602533325832100000|0 (11):: requesting vote from 1
+1602533325832233000|0 (11):: could not connect to server:1
+1602533325832264000|0 (11):: could not connect to server:2
+1602533325966921000|2 (4):: election timed out. state:1
+1602533325967020000|2 (5):: Starting election. term: 5
+1602533325967083000|2 (5):: requesting vote from 1
+1602533325967243000|2 (5):: requesting vote from 0
+1602533326019180000|2 (10):: election timed out. state:1
+1602533326019270000|2 (11):: Starting election. term: 11
+1602533326019306000|2 (11):: requesting vote from 1
+1602533326019362000|2 (11):: requesting vote from 0
+1602533326019458000|2 (11):: could not connect to server:1
+1602533326019495000|2 (11):: could not connect to server:0
+1602533326066785000|1 (4):: election timed out. state:1
+1602533326066897000|1 (5):: Starting election. term: 5
+1602533326066953000|1 (5):: requesting vote from 2
+1602533326067021000|1 (5):: requesting vote from 0
+1602533326086106000|0 (11):: election timed out. state:1
+1602533326086161000|0 (12):: Starting election. term: 12
+1602533326086174000|0 (12):: requesting vote from 2
+1602533326086214000|0 (12):: requesting vote from 1
+1602533326086264000|0 (12):: could not connect to server:1
+1602533326086277000|0 (12):: could not connect to server:2
+1602533326167168000|2 (5):: election timed out. state:1
+1602533326167231000|2 (6):: Starting election. term: 6
+1602533326167254000|2 (6):: requesting vote from 1
+1602533326167324000|2 (6):: requesting vote from 0
+1602533326301228000|2 (11):: election timed out. state:1
+1602533326301275000|2 (12):: Starting election. term: 12
+1602533326301296000|2 (12):: requesting vote from 1
+1602533326301332000|2 (12):: requesting vote from 0
+1602533326301382000|2 (12):: could not connect to server:1
+1602533326301395000|2 (12):: could not connect to server:0
+1602533326302327000|0 (12):: election timed out. state:1
+1602533326302339000|0 (13):: Starting election. term: 13
+1602533326302356000|0 (13):: requesting vote from 2
+1602533326302385000|0 (13):: requesting vote from 1
+1602533326302429000|0 (13):: could not connect to server:2
+1602533326302443000|0 (13):: could not connect to server:1
+1602533326308029000|1 (5):: election timed out. state:1
+1602533326308087000|1 (6):: Starting election. term: 6
+1602533326308111000|1 (6):: requesting vote from 2
+1602533326308163000|1 (6):: requesting vote from 0
+1602533326321129000|1 (6):: could not connect to server:2
+1602533326374677000|2 (6):: could not connect to server:0
+1602533326439397000|2 (6):: election timed out. state:1
+1602533326439456000|2 (7):: Starting election. term: 7
+1602533326439488000|2 (7):: requesting vote from 1
+1602533326439554000|2 (7):: requesting vote from 0
+1602533326491282000|1 (6):: election timed out. state:1
+1602533326491349000|1 (7):: Starting election. term: 7
+1602533326491367000|1 (7):: requesting vote from 2
+1602533326491396000|1 (7):: requesting vote from 0
+1602533326503959000|0 (13):: election timed out. state:1
+1602533326504010000|0 (14):: Starting election. term: 14
+1602533326504035000|0 (14):: requesting vote from 2
+1602533326504105000|0 (14):: could not connect to server:2
+1602533326504126000|0 (14):: requesting vote from 1
+1602533326504206000|0 (14):: could not connect to server:1
+1602533326546375000|2 (12):: election timed out. state:1
+1602533326546444000|2 (13):: Starting election. term: 13
+1602533326546493000|2 (13):: requesting vote from 0
+1602533326546592000|2 (13):: requesting vote from 1
+1602533326546629000|2 (13):: could not connect to server:0
+1602533326546677000|2 (13):: could not connect to server:1
+1602533326636150000|2 (7):: election timed out. state:1
+1602533326636222000|2 (8):: Starting election. term: 8
+1602533326636249000|2 (8):: requesting vote from 1
+1602533326636297000|2 (8):: requesting vote from 0
+1602533326681506000|1 (7):: election timed out. state:1
+1602533326681572000|1 (8):: Starting election. term: 8
+1602533326681604000|1 (8):: requesting vote from 2
+1602533326681662000|1 (8):: requesting vote from 0
+1602533326747448000|2 (8):: could not connect to server:1
+1602533326761612000|2 (13):: election timed out. state:1
+1602533326761703000|2 (14):: Starting election. term: 14
+1602533326761735000|2 (14):: requesting vote from 1
+1602533326761798000|2 (14):: requesting vote from 0
+1602533326761926000|2 (14):: could not connect to server:1
+1602533326761986000|2 (14):: could not connect to server:0
+1602533326775591000|0 (14):: election timed out. state:1
+1602533326775656000|0 (15):: Starting election. term: 15
+1602533326775682000|0 (15):: requesting vote from 2
+1602533326775799000|0 (15):: requesting vote from 1
+1602533326775879000|0 (15):: could not connect to server:2
+1602533326775913000|0 (15):: could not connect to server:1
+1602533326837094000|1 (8):: election timed out. state:1
+1602533326837149000|1 (9):: Starting election. term: 9
+1602533326837171000|1 (9):: requesting vote from 2
+1602533326837201000|1 (9):: requesting vote from 0
+1602533326858064000|2 (8):: election timed out. state:1
+1602533326858179000|2 (9):: Starting election. term: 9
+1602533326858244000|2 (9):: requesting vote from 1
+1602533326858319000|2 (9):: requesting vote from 0
+1602533327003515000|1 (9):: election timed out. state:1
+1602533327003681000|1 (10):: Starting election. term: 10
+1602533327003710000|1 (10):: requesting vote from 2
+1602533327003782000|1 (10):: requesting vote from 0
+1602533327015993000|2 (14):: election timed out. state:1
+1602533327016053000|2 (15):: Starting election. term: 15
+1602533327016087000|2 (15):: requesting vote from 1
+1602533327016164000|2 (15):: requesting vote from 0
+1602533327016275000|2 (15):: could not connect to server:0
+1602533327016299000|2 (15):: could not connect to server:1
+1602533327063015000|0 (15):: election timed out. state:1
+1602533327063097000|0 (16):: Starting election. term: 16
+1602533327063123000|0 (16):: requesting vote from 2
+1602533327063185000|0 (16):: requesting vote from 1
+1602533327063288000|0 (16):: could not connect to server:1
+1602533327063321000|0 (16):: could not connect to server:2
+1602533327072897000|2 (9):: could not connect to server:1
+1602533327112886000|1 (10):: could not connect to server:0
+1602533327137620000|2 (9):: election timed out. state:1
+1602533327137723000|2 (10):: Starting election. term: 10
+1602533327137747000|2 (10):: requesting vote from 1
+1602533327137802000|2 (10):: requesting vote from 0
+1602533327150080000|5 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+1602533327150140000|1: Connecting
+1602533327193347000|2 (15):: election timed out. state:1
+1602533327193444000|2 (16):: Starting election. term: 16
+1602533327193481000|2 (16):: requesting vote from 1
+1602533327193532000|2 (16):: requesting vote from 0
+1602533327193613000|2 (16):: could not connect to server:1
+1602533327193675000|2 (16):: could not connect to server:0
+1602533327262958000|0 (16):: election timed out. state:1
+1602533327263006000|0 (17):: Starting election. term: 17
+1602533327263026000|0 (17):: requesting vote from 2
+1602533327263051000|0 (17):: requesting vote from 1
+1602533327263079000|0 (17):: could not connect to server:2
+1602533327263103000|0 (17):: could not connect to server:1
+1602533327270873000|1 (10):: election timed out. state:1
+1602533327270935000|1 (11):: Starting election. term: 11
+1602533327270962000|1 (11):: requesting vote from 2
+1602533327270989000|1 (11):: requesting vote from 0
+1602533327271203000|2 (10):: incoming RequestVote, not granting. state:1, candidate:1
+1602533327271299000|1 (11):: Vote not granted, state:1
+1602533327322777000|2 (10):: could not connect to server:0
+1602533327401208000|2 (10):: election timed out. state:1
+1602533327401290000|2 (11):: Starting election. term: 11
+1602533327401334000|2 (11):: requesting vote from 1
+1602533327401401000|2 (11):: requesting vote from 0
+1602533327401577000|1 (11):: incoming RequestVote, not granting. state:1, candidate:2
+1602533327401686000|2 (11):: Vote not granted, state:1
+1602533327465257000|1 (11):: could not connect to server:0
+1602533327475296000|1 (11):: election timed out. state:1
+1602533327475441000|1 (12):: Starting election. term: 12
+1602533327475473000|1 (12):: requesting vote from 2
+1602533327475560000|1 (12):: requesting vote from 0
+1602533327475702000|2 (11):: incoming RequestVote, not granting. state:1, candidate:1
+1602533327475814000|1 (12):: Vote not granted, state:1
+1602533327476540000|0 (17):: election timed out. state:1
+1602533327476583000|0 (18):: Starting election. term: 18
+1602533327476611000|0 (18):: requesting vote from 2
+1602533327476683000|0 (18):: requesting vote from 1
+1602533327476757000|0 (18):: could not connect to server:2
+1602533327476798000|0 (18):: could not connect to server:1
+1602533327478660000|1 (12):: could not connect to server:0
+1602533327486966000|2 (16):: election timed out. state:1
+1602533327487064000|2 (17):: Starting election. term: 17
+1602533327487179000|2 (17):: requesting vote from 1
+1602533327487280000|2 (17):: requesting vote from 0
+1602533327487414000|2 (17):: could not connect to server:0
+1602533327487453000|2 (17):: could not connect to server:1
+1602533327636497000|2 (11):: election timed out. state:1
+1602533327636599000|2 (12):: Starting election. term: 12
+1602533327636648000|2 (12):: requesting vote from 1
+1602533327636709000|2 (12):: requesting vote from 0
+1602533327636903000|1 (12):: incoming RequestVote, not granting. state:1, candidate:2
+1602533327637027000|2 (12):: Vote not granted, state:1
+1602533327642373000|2 (17):: election timed out. state:1
+1602533327642437000|2 (18):: Starting election. term: 18
+1602533327642484000|2 (18):: requesting vote from 1
+1602533327642592000|2 (18):: requesting vote from 0
+1602533327642716000|2 (18):: could not connect to server:0
+1602533327642743000|2 (18):: could not connect to server:1
+1602533327658018000|1 (12):: election timed out. state:1
+1602533327658170000|1 (13):: Starting election. term: 13
+1602533327658225000|1 (13):: requesting vote from 2
+1602533327658274000|1 (13):: requesting vote from 0
+1602533327658591000|2 (12):: incoming RequestVote, not granting. state:1, candidate:1
+1602533327658820000|1 (13):: Vote not granted, state:1
+1602533327675059000|1 (13):: could not connect to server:2
+1602533327724191000|0 (18):: election timed out. state:1
+1602533327724294000|0 (19):: Starting election. term: 19
+1602533327724348000|0 (19):: requesting vote from 1
+1602533327724432000|0 (19):: requesting vote from 2
+1602533327724457000|0 (19):: could not connect to server:1
+1602533327724502000|0 (19):: could not connect to server:2
+1602533327904512000|1 (13):: could not connect to server:2
+1602533327916883000|1 (13):: election timed out. state:1
+1602533327916948000|1 (14):: Starting election. term: 14
+1602533327916977000|1 (14):: requesting vote from 2
+1602533327917034000|1 (14):: requesting vote from 0
+1602533327917230000|2 (12):: incoming RequestVote, not granting. state:1, candidate:1
+1602533327917353000|1 (14):: Vote not granted, state:1
+1602533327928383000|2 (18):: election timed out. state:1
+1602533327928487000|2 (19):: Starting election. term: 19
+1602533327928535000|2 (19):: requesting vote from 1
+1602533327928586000|2 (19):: requesting vote from 0
+1602533327928642000|2 (19):: could not connect to server:1
+1602533327928687000|2 (19):: could not connect to server:0
+1602533327930815000|2 (12):: election timed out. state:1
+1602533327930864000|2 (13):: Starting election. term: 13
+1602533327930891000|2 (13):: requesting vote from 1
+1602533327930965000|2 (13):: requesting vote from 0
+1602533327931169000|1 (14):: incoming RequestVote, not granting. state:1, candidate:2
+1602533327931322000|2 (13):, becoming follower
+1602533327931348000|2 (14):: start sleeping
+1602533327986737000|0 (19):: election timed out. state:1
+1602533327986796000|0 (20):: Starting election. term: 20
+1602533327986823000|0 (20):: requesting vote from 2
+1602533327986866000|0 (20):: requesting vote from 1
+1602533327986962000|0 (20):: could not connect to server:2
+1602533327986989000|0 (20):: could not connect to server:1
+1602533328071113000|2 (14):: could not connect to server:1
+1602533328095555000|2 (14):: end sleeping
+1602533328095638000|2 (14):: becoming candidate
+1602533328095659000|2 (15):: Starting election. term: 15
+1602533328095695000|2 (15):: requesting vote from 1
+1602533328095796000|2 (15):: requesting vote from 0
+1602533328096094000|1 (14):: incoming RequestVote, not granting. state:1, candidate:2
+1602533328096306000|2 (15):: Vote not granted, state:1
+1602533328169013000|1 (14):: election timed out. state:1
+1602533328169080000|1 (15):: Starting election. term: 15
+1602533328169105000|1 (15):: requesting vote from 2
+1602533328169171000|1 (15):: requesting vote from 0
+1602533328169329000|2 (15):: incoming RequestVote, not granting. state:1, candidate:1
+1602533328169487000|1 (15):: Vote not granted, state:1
+1602533328171353000|0 (20):: election timed out. state:1
+1602533328171409000|0 (21):: Starting election. term: 21
+1602533328171434000|0 (21):: requesting vote from 2
+1602533328171515000|0 (21):: requesting vote from 1
+1602533328171601000|0 (21):: could not connect to server:2
+1602533328171630000|0 (21):: could not connect to server:1
+1602533328217967000|2 (19):: election timed out. state:1
+1602533328218039000|2 (20):: Starting election. term: 20
+1602533328218068000|2 (20):: requesting vote from 1
+1602533328218151000|2 (20):: requesting vote from 0
+1602533328218259000|2 (20):: could not connect to server:0
+1602533328218283000|2 (20):: could not connect to server:1
+1602533328237321000|2 (15):: could not connect to server:0
+1602533328302205000|1 (15):: could not connect to server:0
+1602533328344210000|1 (15):: election timed out. state:1
+1602533328344311000|1 (16):: Starting election. term: 16
+1602533328344357000|1 (16):: requesting vote from 2
+1602533328344461000|0 (21):: election timed out. state:1
+1602533328344520000|0 (22):: Starting election. term: 22
+1602533328344556000|1 (16):: requesting vote from 0
+1602533328344674000|2 (15):: incoming RequestVote, not granting. state:1, candidate:1
+1602533328344731000|0 (22):: requesting vote from 2
+1602533328344813000|0 (22):: requesting vote from 1
+1602533328344880000|1 (16):: Vote not granted, state:1
+1602533328344913000|0 (22):: could not connect to server:1
+1602533328344933000|0 (22):: could not connect to server:2
+1602533328374960000|1 (16):: could not connect to server:0
+1602533328377237000|2 (15):: election timed out. state:1
+1602533328377304000|2 (16):: Starting election. term: 16
+1602533328377338000|2 (16):: requesting vote from 1
+1602533328377385000|2 (16):: requesting vote from 0
+1602533328377608000|1 (16):: incoming RequestVote, not granting. state:1, candidate:2
+1602533328377760000|2 (16):: Vote not granted, state:1
+1602533328397237000|2 (20):: election timed out. state:1
+1602533328397300000|2 (21):: Starting election. term: 21
+1602533328397323000|2 (21):: requesting vote from 1
+1602533328397355000|2 (21):: requesting vote from 0
+1602533328397438000|2 (21):: could not connect to server:0
+1602533328397453000|2 (21):: could not connect to server:1
+1602533328496520000|1 (16):: election timed out. state:1
+1602533328496581000|1 (17):: Starting election. term: 17
+1602533328496609000|1 (17):: requesting vote from 2
+1602533328496671000|1 (17):: requesting vote from 0
+1602533328496848000|2 (16):: incoming RequestVote, not granting. state:1, candidate:1
+1602533328496961000|1 (17):: Vote not granted, state:1
+1602533328510638000|0 (22):: election timed out. state:1
+1602533328510763000|0 (23):: Starting election. term: 23
+1602533328510806000|0 (23):: requesting vote from 2
+1602533328510845000|0 (23):: requesting vote from 1
+1602533328510971000|0 (23):: could not connect to server:2
+1602533328511041000|0 (23):: could not connect to server:1
+1602533328562455000|1 (17):: could not connect to server:2
+1602533328562535000|2 (16):: could not connect to server:1
+1602533328579339000|2 (16):: could not connect to server:0
+1602533328613830000|2 (21):: election timed out. state:1
+1602533328613921000|2 (22):: Starting election. term: 22
+1602533328613970000|2 (22):: requesting vote from 1
+1602533328614009000|2 (22):: requesting vote from 0
+1602533328614064000|2 (22):: could not connect to server:1
+1602533328614121000|2 (22):: could not connect to server:0
+1602533328614150000|2 (16):: election timed out. state:1
+1602533328614163000|2 (17):: Starting election. term: 17
+1602533328614191000|2 (17):: requesting vote from 1
+1602533328614257000|2 (17):: requesting vote from 0
+1602533328614375000|1 (17):: incoming RequestVote, not granting. state:1, candidate:2
+1602533328614480000|2 (17):: Vote not granted, state:1
+1602533328689593000|1 (17):: election timed out. state:1
+1602533328689677000|1 (18):: Starting election. term: 18
+1602533328689715000|1 (18):: requesting vote from 2
+1602533328689819000|1 (18):: requesting vote from 0
+1602533328690026000|2 (17):: incoming RequestVote, not granting. state:1, candidate:1
+1602533328690191000|1 (18):: Vote not granted, state:1
+1602533328697139000|2 (17):: could not connect to server:0
+1602533328743342000|1 (18):: could not connect to server:2
+1602533328761877000|1 (18):: could not connect to server:2
+1602533328776802000|2 (17):: election timed out. state:1
+1602533328776884000|2 (18):: Starting election. term: 18
+1602533328776920000|2 (18):: requesting vote from 1
+1602533328776981000|2 (18):: requesting vote from 0
+1602533328777226000|1 (18):: incoming RequestVote, not granting. state:1, candidate:2
+1602533328777393000|2 (18):: Vote not granted, state:1
+1602533328777503000|0 (23):: election timed out. state:1
+1602533328777567000|0 (24):: Starting election. term: 24
+1602533328777601000|0 (24):: requesting vote from 2
+1602533328777679000|0 (24):: requesting vote from 1
+1602533328777786000|0 (24):: could not connect to server:1
+1602533328777817000|0 (24):: could not connect to server:2
+1602533328853629000|2 (22):: election timed out. state:1
+1602533328853686000|2 (23):: Starting election. term: 23
+1602533328853713000|2 (23):: requesting vote from 1
+1602533328853746000|2 (23):: requesting vote from 0
+1602533328853835000|2 (23):: could not connect to server:1
+1602533328853873000|2 (23):: could not connect to server:0
+1602533328858191000|1 (18):: election timed out. state:1
+1602533328858266000|1 (19):: Starting election. term: 19
+1602533328858299000|1 (19):: requesting vote from 2
+1602533328858412000|1 (19):: requesting vote from 0
+1602533328858561000|2 (18):: incoming RequestVote, not granting. state:1, candidate:1
+1602533328858696000|1 (19):: Vote not granted, state:1
+1602533328930160000|2 (18):: could not connect to server:0
+1602533328978437000|0 (24):: election timed out. state:1
+1602533328978524000|0 (25):: Starting election. term: 25
+1602533328978556000|0 (25):: requesting vote from 2
+1602533328978637000|0 (25):: requesting vote from 1
+1602533328978769000|0 (25):: could not connect to server:1
+1602533328978820000|0 (25):: could not connect to server:2
+1602533329007059000|2 (23):: election timed out. state:1
+1602533329007146000|2 (24):: Starting election. term: 24
+1602533329007191000|2 (24):: requesting vote from 1
+1602533329007261000|2 (24):: could not connect to server:1
+1602533329007276000|2 (24):: requesting vote from 0
+1602533329007320000|2 (24):: could not connect to server:0
+1602533329009037000|2 (18):: could not connect to server:0
+1602533329036257000|2 (18):: could not connect to server:1
+1602533329054655000|2 (18):: election timed out. state:1
+1602533329054720000|2 (19):: Starting election. term: 19
+1602533329054749000|2 (19):: requesting vote from 1
+1602533329054825000|2 (19):: requesting vote from 0
+1602533329054964000|1 (19):: incoming RequestVote, not granting. state:1, candidate:2
+1602533329055074000|2 (19):: Vote not granted, state:1
+1602533329070399000|1 (19):: could not connect to server:2
+1602533329155009000|1 (19):: election timed out. state:1
+1602533329155069000|1 (20):: Starting election. term: 20
+1602533329155092000|1 (20):: requesting vote from 0
+1602533329155163000|1 (20):: requesting vote from 2
+1602533329155375000|2 (19):: incoming RequestVote, not granting. state:1, candidate:1
+1602533329155484000|1 (20):: Vote not granted, state:1
+1602533329231871000|2 (24):: election timed out. state:1
+1602533329231939000|2 (25):: Starting election. term: 25
+1602533329231965000|2 (25):: requesting vote from 1
+1602533329232021000|2 (25):: requesting vote from 0
+1602533329232119000|2 (25):: could not connect to server:1
+1602533329232168000|2 (25):: could not connect to server:0
+1602533329272394000|0 (25):: election timed out. state:1
+1602533329272501000|0 (26):: Starting election. term: 26
+1602533329272541000|0 (26):: requesting vote from 2
+1602533329272634000|0 (26):: could not connect to server:2
+1602533329272666000|0 (26):: requesting vote from 1
+1602533329272743000|0 (26):: could not connect to server:1
+1602533329283529000|2 (19):: could not connect to server:0
+1602533329296044000|2 (19):: election timed out. state:1
+1602533329296107000|2 (20):: Starting election. term: 20
+1602533329296132000|2 (20):: requesting vote from 1
+1602533329296168000|2 (20):: requesting vote from 0
+1602533329296377000|1 (20):: incoming RequestVote, not granting. state:1, candidate:2
+1602533329296493000|2 (20):: Vote not granted, state:1
+1602533329376309000|1 (20):: election timed out. state:1
+1602533329376387000|1 (21):: Starting election. term: 21
+1602533329376427000|1 (21):: requesting vote from 2
+1602533329376526000|1 (21):: requesting vote from 0
+1602533329376750000|2 (20):: incoming RequestVote, not granting. state:1, candidate:1
+1602533329376913000|1 (21):: Vote not granted, state:1
+1602533329434418000|2 (25):: election timed out. state:1
+1602533329434528000|2 (26):: Starting election. term: 26
+1602533329434585000|2 (26):: requesting vote from 1
+1602533329434659000|2 (26):: requesting vote from 0
+1602533329434739000|2 (26):: could not connect to server:1
+1602533329434782000|2 (26):: could not connect to server:0
+1602533329435214000|1 (21):: could not connect to server:0
+1602533329458335000|1 (21):: could not connect to server:0
+1602533329516829000|1 (21):: could not connect to server:0
+1602533329529680000|2 (20):: election timed out. state:1
+1602533329529753000|2 (21):: Starting election. term: 21
+1602533329529799000|2 (21):: requesting vote from 1
+1602533329529881000|2 (21):: requesting vote from 0
+1602533329530063000|1 (21):: incoming RequestVote, not granting. state:1, candidate:2
+1602533329530199000|2 (21):: Vote not granted, state:1
+1602533329550190000|2 (21):: could not connect to server:1
+1602533329560296000|2 (21):: could not connect to server:0
+1602533329572532000|0 (26):: election timed out. state:1
+1602533329572622000|0 (27):: Starting election. term: 27
+1602533329572653000|0 (27):: requesting vote from 2
+1602533329572722000|0 (27):: requesting vote from 1
+1602533329572762000|0 (27):: could not connect to server:2
+1602533329572829000|0 (27):: could not connect to server:1
+1602533329589820000|1 (21):: election timed out. state:1
+1602533329589902000|1 (22):: Starting election. term: 22
+1602533329589938000|1 (22):: requesting vote from 2
+1602533329590002000|1 (22):: requesting vote from 0
+1602533329590166000|2 (21):: incoming RequestVote, not granting. state:1, candidate:1
+1602533329590280000|1 (22):: Vote not granted, state:1
+1602533329641521000|2 (26):: election timed out. state:1
+1602533329641597000|2 (27):: Starting election. term: 27
+1602533329641635000|2 (27):: requesting vote from 1
+1602533329641702000|2 (27):: requesting vote from 0
+1602533329641848000|2 (27):: could not connect to server:1
+1602533329641911000|2 (27):: could not connect to server:0
+1602533329663142000|1 (22):: could not connect to server:0
+1602533329707278000|1 (22):: could not connect to server:0
+1602533329710476000|1 (22):: could not connect to server:0
+1602533329733582000|0 (27):: election timed out. state:1
+1602533329733639000|0 (28):: Starting election. term: 28
+1602533329733670000|0 (28):: requesting vote from 2
+1602533329733743000|0 (28):: requesting vote from 1
+1602533329733815000|0 (28):: could not connect to server:2
+1602533329733851000|0 (28):: could not connect to server:1
+1602533329758051000|2 (21):: election timed out. state:1
+1602533329758171000|2 (22):: Starting election. term: 22
+1602533329758207000|2 (22):: requesting vote from 1
+1602533329758268000|2 (22):: requesting vote from 0
+1602533329758538000|1 (22):: incoming RequestVote, not granting. state:1, candidate:2
+1602533329758707000|2 (22):: Vote not granted, state:1
+1602533329800381000|1 (22):: election timed out. state:1
+1602533329800489000|1 (23):: Starting election. term: 23
+1602533329800531000|1 (23):: requesting vote from 2
+1602533329800589000|1 (23):: requesting vote from 0
+1602533329800748000|2 (22):: incoming RequestVote, not granting. state:1, candidate:1
+1602533329800859000|1 (23):: Vote not granted, state:1
+1602533329841448000|2 (27):: election timed out. state:1
+1602533329841539000|2 (28):: Starting election. term: 28
+1602533329841591000|2 (28):: requesting vote from 1
+1602533329841695000|2 (28):: requesting vote from 0
+1602533329841840000|2 (28):: could not connect to server:1
+1602533329841957000|2 (28):: could not connect to server:0
+1602533329930634000|2 (22):: election timed out. state:1
+1602533329930711000|2 (23):: Starting election. term: 23
+1602533329930736000|2 (23):: requesting vote from 0
+1602533329930864000|2 (23):: requesting vote from 1
+1602533329931067000|1 (23):: incoming RequestVote, not granting. state:1, candidate:2
+1602533329931184000|2 (23):: Vote not granted, state:1
+1602533329949857000|0 (28):: election timed out. state:1
+1602533329949943000|0 (29):: Starting election. term: 29
+1602533329949977000|0 (29):: requesting vote from 2
+1602533329950048000|0 (29):: requesting vote from 1
+1602533329950143000|0 (29):: could not connect to server:2
+1602533329950204000|0 (29):: could not connect to server:1
+1602533329958792000|1 (23):: election timed out. state:1
+1602533329958845000|1 (24):: Starting election. term: 24
+1602533329958894000|1 (24):: requesting vote from 0
+1602533329958983000|1 (24):: requesting vote from 2
+1602533329959210000|2 (23):: incoming RequestVote, not granting. state:1, candidate:1
+1602533329959321000|1 (24):: Vote not granted, state:1
+1602533330082877000|1 (24):: could not connect to server:0
+1602533330085965000|2 (28):: election timed out. state:1
+1602533330086011000|2 (29):: Starting election. term: 29
+1602533330086040000|2 (29):: requesting vote from 1
+1602533330086161000|2 (29):: could not connect to server:1
+1602533330086185000|2 (29):: requesting vote from 0
+1602533330086272000|2 (29):: could not connect to server:0
+1602533330171255000|1 (24):: election timed out. state:1
+1602533330171317000|1 (25):: Starting election. term: 25
+1602533330171342000|1 (25):: requesting vote from 2
+1602533330171374000|1 (25):: requesting vote from 0
+1602533330171543000|2 (23):: incoming RequestVote, not granting. state:1, candidate:1
+1602533330171650000|1 (25):: Vote not granted, state:1
+1602533330200250000|2 (23):: election timed out. state:1
+1602533330200320000|2 (24):: Starting election. term: 24
+1602533330200353000|2 (24):: requesting vote from 1
+1602533330200420000|2 (24):: requesting vote from 0
+1602533330200613000|1 (25):: incoming RequestVote, not granting. state:1, candidate:2
+1602533330200739000|2 (24):, becoming follower
+1602533330200768000|2 (25):: start sleeping
+1602533330241515000|2 (29):: election timed out. state:1
+1602533330241645000|2 (30):: Starting election. term: 30
+1602533330241687000|2 (30):: requesting vote from 1
+1602533330241733000|2 (30):: requesting vote from 0
+1602533330241858000|2 (30):: could not connect to server:1
+1602533330241928000|2 (30):: could not connect to server:0
+1602533330245652000|0 (29):: election timed out. state:1
+1602533330245696000|0 (30):: Starting election. term: 30
+1602533330245725000|0 (30):: requesting vote from 1
+1602533330245775000|0 (30):: requesting vote from 2
+1602533330245843000|0 (30):: could not connect to server:1
+1602533330245873000|0 (30):: could not connect to server:2
+1602533330358036000|1 (25):: election timed out. state:1
+1602533330358121000|1 (26):: Starting election. term: 26
+1602533330358190000|1 (26):: requesting vote from 2
+1602533330358295000|1 (26):: requesting vote from 0
+1602533330358481000|2 (25):: incoming RequestVote, granting. state:2, candidate:1
+1602533330358623000|1 (26): vote granted, state:1
+1602533330358645000|1 (26):: Majority voted. votesCout: 2
+1602533330358659000|1 (26):: becoming leader
+1602533330358844000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330358878000|2 (26):, becoming follower
+1602533330370239000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330370311000|2 (26):, becoming follower
+1602533330380508000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330380567000|2 (26):, becoming follower
+1602533330391709000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330391797000|2 (26):, becoming follower
+1602533330404246000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330404322000|2 (26):, becoming follower
+1602533330414964000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330415047000|2 (26):, becoming follower
+1602533330416632000|2 (26):: could not connect to server:0
+1602533330425091000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330425187000|2 (26):, becoming follower
+1602533330436618000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330436783000|2 (26):, becoming follower
+1602533330448252000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330448333000|2 (26):, becoming follower
+1602533330458067000|2 (26):: end sleeping
+1602533330458140000|2 (26):: start sleeping
+1602533330459340000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330459394000|2 (26):, becoming follower
+1602533330471100000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330471178000|2 (26):, becoming follower
+1602533330474867000|0 (30):: election timed out. state:1
+1602533330474946000|0 (31):: Starting election. term: 31
+1602533330474988000|0 (31):: requesting vote from 2
+1602533330475125000|0 (31):: could not connect to server:2
+1602533330475158000|0 (31):: requesting vote from 1
+1602533330475289000|0 (31):: could not connect to server:1
+1602533330483242000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330483321000|2 (26):, becoming follower
+1602533330489454000|2 (30):: election timed out. state:1
+1602533330489520000|2 (31):: Starting election. term: 31
+1602533330489556000|2 (31):: requesting vote from 1
+1602533330489651000|2 (31):: requesting vote from 0
+1602533330489781000|2 (31):: could not connect to server:0
+1602533330489804000|2 (31):: could not connect to server:1
+1602533330495020000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330495107000|2 (26):, becoming follower
+1602533330506226000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330506312000|2 (26):, becoming follower
+1602533330516738000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330516870000|2 (26):, becoming follower
+1602533330528468000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330528562000|2 (26):, becoming follower
+1602533330535720000|2 (26):: could not connect to server:0
+1602533330540995000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330541061000|2 (26):, becoming follower
+1602533330551114000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330551160000|2 (26):, becoming follower
+1602533330561361000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330561402000|2 (26):, becoming follower
+1602533330572537000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330572608000|2 (26):, becoming follower
+1602533330583157000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330583211000|2 (26):, becoming follower
+1602533330595316000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330595447000|2 (26):, becoming follower
+1602533330605739000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330605823000|2 (26):, becoming follower
+1602533330616674000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330616782000|2 (26):, becoming follower
+1602533330628986000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330629050000|2 (26):, becoming follower
+1602533330639161000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330639247000|2 (26):, becoming follower
+1602533330643490000|2 (26):: could not connect to server:0
+1602533330649954000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330650043000|2 (26):, becoming follower
+1602533330661045000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330661130000|2 (26):, becoming follower
+1602533330673503000|2 (26):: end sleeping
+1602533330673655000|2 (26):: start sleeping
+1602533330673823000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330673871000|2 (26):, becoming follower
+1602533330683759000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330683821000|2 (26):, becoming follower
+1602533330695952000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330696005000|2 (26):, becoming follower
+1602533330706768000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330706816000|2 (26):, becoming follower
+1602533330717214000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330717262000|2 (26):, becoming follower
+1602533330728214000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330728277000|2 (26):, becoming follower
+1602533330736330000|6 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+1602533330736393000|0: Connecting
+1602533330738684000|1 (26):: incloming AppendEntry, no success. state:0, leaderID:0
+1602533330738747000|2 (26):: incloming AppendEntry, no success. state:2, leaderID:0
+1602533330738830000|0 (2):, becoming follower
+1602533330738914000|0 (26):, becoming follower
+1602533330740242000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330740280000|2 (26):, becoming follower
+1602533330740299000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330740337000|0 (26):, becoming follower
+1602533330750257000|0 (26):: start sleeping
+1602533330750522000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330750585000|2 (26):, becoming follower
+1602533330750663000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330750703000|0 (26):, becoming follower
+1602533330762253000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330762330000|2 (26):, becoming follower
+1602533330762400000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330762452000|0 (26):, becoming follower
+1602533330768108000|2 (31):: election timed out. state:1
+1602533330768180000|2 (32):: Starting election. term: 32
+1602533330768211000|2 (32):: requesting vote from 1
+1602533330768279000|2 (32):: requesting vote from 0
+1602533330768370000|2 (32):: could not connect to server:0
+1602533330768396000|2 (32):: could not connect to server:1
+1602533330769172000|0 (31):: election timed out. state:1
+1602533330769218000|0 (32):: Starting election. term: 32
+1602533330769250000|0 (32):: requesting vote from 2
+1602533330769319000|0 (32):: requesting vote from 1
+1602533330769416000|0 (32):: could not connect to server:2
+1602533330769456000|0 (32):: could not connect to server:1
+1602533330772853000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330772923000|2 (26):, becoming follower
+1602533330773014000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330773053000|0 (26):, becoming follower
+1602533330783623000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330783765000|0 (26):, becoming follower
+1602533330783787000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330783824000|2 (26):, becoming follower
+1602533330793947000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330793998000|0 (26):, becoming follower
+1602533330794033000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330794057000|2 (26):, becoming follower
+1602533330804810000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330804848000|2 (26):, becoming follower
+1602533330804894000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330804912000|0 (26):, becoming follower
+1602533330816884000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330816939000|2 (26):, becoming follower
+1602533330816991000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330817039000|0 (26):, becoming follower
+1602533330829145000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330829276000|2 (26):, becoming follower
+1602533330829322000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330829360000|0 (26):, becoming follower
+1602533330839406000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330839468000|0 (26):, becoming follower
+1602533330839529000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330839566000|2 (26):, becoming follower
+1602533330840978000|2 (26):: could not connect to server:0
+1602533330850376000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330850425000|0 (26):, becoming follower
+1602533330850453000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330850492000|2 (26):, becoming follower
+1602533330861754000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330861827000|0 (26):, becoming follower
+1602533330861856000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330861906000|2 (26):, becoming follower
+1602533330865355000|1 (26):: could not connect to server:0
+1602533330872399000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330872479000|2 (26):, becoming follower
+1602533330872550000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330872603000|0 (26):, becoming follower
+1602533330883219000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330883320000|0 (26):, becoming follower
+1602533330883432000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330883473000|2 (26):, becoming follower
+1602533330894031000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330894097000|0 (26):, becoming follower
+1602533330894122000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330894182000|2 (26):, becoming follower
+1602533330905185000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330905272000|2 (26):, becoming follower
+1602533330905296000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330905354000|0 (26):, becoming follower
+1602533330916657000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330916732000|2 (26):, becoming follower
+1602533330916766000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330916825000|0 (26):, becoming follower
+1602533330919413000|2 (32):: election timed out. state:1
+1602533330919495000|2 (33):: Starting election. term: 33
+1602533330919544000|2 (33):: requesting vote from 1
+1602533330919664000|2 (33):: requesting vote from 0
+1602533330919801000|2 (33):: could not connect to server:1
+1602533330919858000|2 (33):: could not connect to server:0
+1602533330927424000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330927495000|0 (26):, becoming follower
+1602533330927520000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330927580000|2 (26):, becoming follower
+1602533330938562000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330938642000|0 (26):, becoming follower
+1602533330938683000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330938738000|2 (26):, becoming follower
+1602533330950046000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330950131000|2 (26):, becoming follower
+1602533330950196000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330950274000|0 (26):, becoming follower
+1602533330960406000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330960477000|2 (26):, becoming follower
+1602533330960566000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330960617000|0 (26):, becoming follower
+1602533330965056000|2 (26):: end sleeping
+1602533330965148000|2 (26):: start sleeping
+1602533330971465000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330971542000|0 (26):, becoming follower
+1602533330971676000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330971736000|2 (26):, becoming follower
+1602533330983809000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330983891000|2 (26):, becoming follower
+1602533330983989000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330984076000|0 (26):, becoming follower
+1602533330994432000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330994489000|2 (26):, becoming follower
+1602533330994550000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533330994609000|0 (26):, becoming follower
+1602533331005528000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331005616000|2 (26):, becoming follower
+1602533331005648000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331005708000|0 (26):, becoming follower
+1602533331017150000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331017231000|0 (26):, becoming follower
+1602533331017280000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331017330000|2 (26):, becoming follower
+1602533331026363000|0 (32):: election timed out. state:1
+1602533331026424000|0 (33):: Starting election. term: 33
+1602533331026461000|0 (33):: requesting vote from 2
+1602533331026548000|0 (33):: requesting vote from 1
+1602533331026680000|0 (33):: could not connect to server:1
+1602533331026711000|0 (33):: could not connect to server:2
+1602533331028514000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331028573000|2 (26):, becoming follower
+1602533331028615000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331028665000|0 (26):, becoming follower
+1602533331039673000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331039762000|2 (26):, becoming follower
+1602533331039785000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331039839000|0 (26):, becoming follower
+1602533331050149000|0 (26):: end sleeping
+1602533331050263000|0 (26):: start sleeping
+1602533331050457000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331050498000|0 (26):, becoming follower
+1602533331050520000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331050588000|2 (26):, becoming follower
+1602533331062124000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331062200000|2 (26):, becoming follower
+1602533331062231000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331062282000|0 (26):, becoming follower
+1602533331071598000|2 (33):: election timed out. state:1
+1602533331071660000|2 (34):: Starting election. term: 34
+1602533331071698000|2 (34):: requesting vote from 1
+1602533331071819000|2 (34):: requesting vote from 0
+1602533331071935000|2 (34):: could not connect to server:0
+1602533331071967000|2 (34):: could not connect to server:1
+1602533331072213000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331072250000|2 (26):, becoming follower
+1602533331072272000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331072307000|0 (26):, becoming follower
+1602533331083248000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331083298000|0 (26):, becoming follower
+1602533331083323000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331083361000|2 (26):, becoming follower
+1602533331094941000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331094992000|2 (26):, becoming follower
+1602533331095011000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331095050000|0 (26):, becoming follower
+1602533331105100000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331105156000|0 (26):, becoming follower
+1602533331105198000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331105213000|2 (26):, becoming follower
+1602533331115248000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331115277000|0 (26):, becoming follower
+1602533331115313000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331115332000|2 (26):, becoming follower
+1602533331127407000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331127470000|2 (26):, becoming follower
+1602533331127509000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331127564000|0 (26):, becoming follower
+1602533331139512000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331139563000|0 (26):, becoming follower
+1602533331139585000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331139620000|2 (26):, becoming follower
+1602533331151797000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331151921000|2 (26):, becoming follower
+1602533331151950000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331152002000|0 (26):, becoming follower
+1602533331162947000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331163028000|2 (26):, becoming follower
+1602533331163104000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331163158000|0 (26):, becoming follower
+1602533331173232000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331173312000|0 (26):, becoming follower
+1602533331173384000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331173438000|2 (26):, becoming follower
+1602533331183522000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331183606000|0 (26):, becoming follower
+1602533331183684000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331183738000|2 (26):, becoming follower
+1602533331196081000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331196159000|0 (26):, becoming follower
+1602533331196183000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331196236000|2 (26):, becoming follower
+1602533331205582000|0 (26):: end sleeping
+1602533331205661000|0 (26):: start sleeping
+1602533331206274000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331206356000|0 (26):, becoming follower
+1602533331206442000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331206496000|2 (26):, becoming follower
+1602533331216717000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331216790000|2 (26):, becoming follower
+1602533331216880000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331216940000|0 (26):, becoming follower
+1602533331228514000|0 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331228564000|0 (26):, becoming follower
+1602533331228598000|2 (26):: incoming AppendEntry, success. state:2, leaderID:1
+1602533331228659000|2 (26):, becoming follower
+1602533331232303000|7 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+1602533331232334000|  ... Passed --
+1602533331232352000|   7.6  3 1498  106022    0
+1602533331232352000|
+1602533331232352000|PASS
+1602533331232352000|ok  	_/Users/zviki/Distributed-Systems/dd-labs/src/raft	10.687s

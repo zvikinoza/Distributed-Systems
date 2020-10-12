@@ -238,7 +238,7 @@ func (cfg *config) cleanup() {
 // attach server i to the net.
 func (cfg *config) connect(i int) {
 	// fmt.Printf("connect(%d)\n", i)
-
+	DPrintf("%v: Connecting", i)
 	cfg.connected[i] = true
 
 	// outgoing ClientEnds
@@ -261,7 +261,7 @@ func (cfg *config) connect(i int) {
 // detach server i from the net.
 func (cfg *config) disconnect(i int) {
 	// fmt.Printf("disconnect(%d)\n", i)
-
+	DPrintf("%v: Disconnecting", i)
 	cfg.connected[i] = false
 
 	// outgoing ClientEnds
@@ -484,7 +484,7 @@ func (cfg *config) one(cmd interface{}, expectedServers int, retry bool) int {
 // print the Test message.
 // e.g. cfg.begin("Test (2B): RPC counts aren't too high")
 func (cfg *config) begin(description string) {
-	fmt.Printf("%s ...\n", description)
+	DPrintf("%s ...\n", description)
 	cfg.t0 = time.Now()
 	cfg.rpcs0 = cfg.rpcTotal()
 	cfg.bytes0 = cfg.bytesTotal()
@@ -507,7 +507,7 @@ func (cfg *config) end() {
 		ncmds := cfg.maxIndex - cfg.maxIndex0   // number of Raft agreements reported
 		cfg.mu.Unlock()
 
-		fmt.Printf("  ... Passed --")
-		fmt.Printf("  %4.1f  %d %4d %7d %4d\n", t, npeers, nrpc, nbytes, ncmds)
+		DPrintf("  ... Passed --")
+		DPrintf("  %4.1f  %d %4d %7d %4d\n", t, npeers, nrpc, nbytes, ncmds)
 	}
 }
