@@ -60,9 +60,9 @@ const (
 
 const (
 	nobody            = -1
-	timeoutMin        = 150
-	timeoutMax        = 300
-	heartbeatInterval = 10
+	timeoutMin        = 250
+	timeoutMax        = 500
+	heartbeatInterval = 100
 )
 
 //
@@ -154,44 +154,44 @@ type AppendEntryReply struct {
 // RPCs
 func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 	rf.mu.Lock()
-	currentTerm := rf.Term
-	votedFor := rf.votedFor
-	rf.mu.Unlock()
+	defer rf.mu.Unlock()
 
-	// not grant vote
-	if args.Term < currentTerm || (votedFor != nobody && votedFor != args.CandidateID) {
-		DPrintf("%v (%v):: incoming RequestVote, not granting. state:%v, candidate:%v", rf.me, rf.Term, rf.State, args.CandidateID)
-		reply.Term = currentTerm
+	if args.Term < rf.Term {
+		// not grant vote because outdated
+		reply.Term = rf.Term
 		reply.VoteGranted = false
-		return
+	} else if rf.State != Follower || rf.votedFor == nobody || rf.votedFor == args.CandidateID {
+		// grant vote
+		rf.Term = args.Term
+		rf.State = Follower
+		rf.votedFor = args.CandidateID
+		rf.lastContact = time.Now()
+		reply.Term = args.Term
+		reply.VoteGranted = true
+	} else {
+		// not grant vote because am folower
+		// and already gave other peer vote
+		reply.Term = rf.Term
+		reply.VoteGranted = false
 	}
-	DPrintf("%v (%v):: incoming RequestVote, granting. state:%v, candidate:%v", rf.me, rf.Term, rf.State, args.CandidateID)
-
-	// grant vote
-	rf.mu.Lock()
-	rf.Term = args.Term
-	rf.State = Follower
-	rf.votedFor = args.CandidateID
-	rf.lastContact = time.Now()
-	rf.mu.Unlock()
-
-	reply.Term = args.Term
-	reply.VoteGranted = true
 }
 
 func (rf *Raft) AppendEntry(args *AppendEntryArgs, reply *AppendEntryReply) {
-	currentTerm, _ := rf.GetState()
+	rf.mu.Lock()
+	defer rf.mu.Unlock()
 
-	if args.Term < currentTerm {
-		DPrintf("%v (%v):: incloming AppendEntry, no success. state:%v, leaderID:%v", rf.me, rf.Term, rf.State, args.LeaderId)
-		reply.Term = currentTerm
+	if args.Term < rf.Term {
+		// ignoring outdated entries
+		reply.Term = rf.Term
 		reply.Success = false
-		return
+	} else {
+		rf.Term = args.Term
+		rf.State = Follower
+		rf.votedFor = nobody
+		rf.lastContact = time.Now()
+		reply.Term = args.Term
+		reply.Success = true
 	}
-	DPrintf("%v (%v):: incoming AppendEntry, success. state:%v, leaderID:%v", rf.me, rf.Term, rf.State, args.LeaderId)
-	rf.becomeFolower(args.Term)
-	reply.Term = args.Term
-	reply.Success = true
 }
 
 //
@@ -326,13 +326,12 @@ func (rf *Raft) rafting() {
 }
 
 func (rf *Raft) receiveHeartbeats() {
-	DPrintf("%v (%v):: start sleeping", rf.me, rf.Term)
 	electionTimeout := rf.timeout()
-	DPrintf("%v (%v):: end sleeping", rf.me, rf.Term)
+
 	rf.mu.Lock()
 	maxWait := rf.lastContact.Add(electionTimeout)
-
 	rf.mu.Unlock()
+
 	if time.Now().After(maxWait) {
 		rf.becomeCandidate()
 	}
@@ -346,7 +345,6 @@ func (rf *Raft) timeout() time.Duration {
 }
 
 func (rf *Raft) becomeCandidate() {
-	DPrintf("%v (%v):: becoming candidate", rf.me, rf.Term)
 	rf.mu.Lock()
 	defer rf.mu.Unlock()
 
@@ -355,15 +353,14 @@ func (rf *Raft) becomeCandidate() {
 }
 
 func (rf *Raft) becomeLeader() {
-	DPrintf("%v (%v):: becoming leader", rf.me, rf.Term)
 	rf.mu.Lock()
 	defer rf.mu.Unlock()
 
+	rf.votedFor = nobody
 	rf.State = Leader
 }
 
 func (rf *Raft) becomeFolower(newTerm int) {
-	DPrintf("%v (%v):, becoming follower", rf.me, rf.Term)
 	rf.mu.Lock()
 	defer rf.mu.Unlock()
 
@@ -407,17 +404,16 @@ func (rf *Raft) startElection() {
 	rf.mu.Lock()
 	rf.Term++
 	rf.votedFor = rf.me
+
 	me := rf.me
 	term := rf.Term
 	rf.mu.Unlock()
 
-	DPrintf("%v (%v):: Starting election. term: %v", me, rf.Term, term)
-	
 	var mu sync.Mutex
 	votesCount := 1
 	notGrantedVotesCount := 0
-	electionDone := make(chan bool)
 	endElection := false
+	wait := sync.NewCond(&mu)
 
 	for server, _ := range rf.peers {
 		if server == me {
@@ -431,58 +427,55 @@ func (rf *Raft) startElection() {
 			}
 			reply := &RequestVoteReply{}
 
-			DPrintf("%v (%v):: requesting vote from %v", me, rf.Term, server)
 			if ok := rf.sendRequestVote(server, args, reply); !ok {
-				DPrintf("%v (%v):: could not connect to server:%v", me, rf.Term, server)
 				return
 			}
 
 			mu.Lock()
 			defer mu.Unlock()
+
 			if endElection {
-				DPrintf("%v (%v):: election timeout expired", me, rf.Term)
 				return
 			}
 
 			if reply.Term > term {
 				rf.becomeFolower(reply.Term)
-				electionDone <- true
-				return
-			}
-
-			state := rf.getState()
-			if !reply.VoteGranted || state != Candidate {
-				DPrintf("%v (%v):: Vote not granted, state:%v", me, rf.Term, rf.State)
+				endElection = true
+				wait.Signal()
+			} else if rf.getState() != Candidate {
+				endElection = true
+				wait.Signal()
+			} else if !reply.VoteGranted {
 				notGrantedVotesCount++
 				if notGrantedVotesCount == (len(rf.peers)/2)+1 {
-					electionDone <- true
+					endElection = true
+					wait.Signal()
 				}
-				return
 			} else {
-				DPrintf("%v (%v): vote granted, state:%v", me, term, rf.State)
-			}
+				votesCount++
+				majorityVoted := (votesCount == (len(rf.peers)/2)+1)
 
-			votesCount++
-			majorityVoted := (votesCount == (len(rf.peers)/2)+1)
-
-			if majorityVoted {
-				DPrintf("%v (%v):: Majority voted. votesCout: %v", me, rf.Term, votesCount)
-				rf.becomeLeader()
-				electionDone <- true
+				if majorityVoted {
+					rf.becomeLeader()
+					endElection = true
+					wait.Signal()
+				}
 			}
 		}(server, me, term)
 	}
 	t := rand.Intn(timeoutMax-timeoutMin) + timeoutMin
 	timeout := time.Duration(t) * time.Millisecond
 
-	select {
-	case <-electionDone:
-	case <-time.After(timeout):
-		DPrintf("%v (%v):: election timed out. state:%v", me, rf.Term, rf.State)
-	}
+	go func() {
+		time.Sleep(timeout)
+		mu.Lock()
+		endElection = true
+		wait.Signal()
+		mu.Unlock()
+	}()
 
 	mu.Lock()
-	endElection = true
+	wait.Wait()
 	mu.Unlock()
 }
 
