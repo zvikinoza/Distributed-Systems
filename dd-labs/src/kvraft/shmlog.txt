@@ -1,0 +1,89 @@
+Test: one client (3A) ...
+2020/12/15 00:34:04 PutAppend sendind : &{Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:04 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:04 retry sending PutAppend
+2020/12/15 00:34:04 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+labgob warning: Decoding into a non-default variable/field Err may not work
+2020/12/15 00:34:04 retry sending PutAppend
+2020/12/15 00:34:04 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:04 retry sending PutAppend
+2020/12/15 00:34:04 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 retry sending PutAppend
+2020/12/15 00:34:05 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 retry sending PutAppend
+2020/12/15 00:34:05 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 retry sending PutAppend
+2020/12/15 00:34:05 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 retry sending PutAppend
+2020/12/15 00:34:05 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 retry sending PutAppend
+2020/12/15 00:34:05 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 retry sending PutAppend
+2020/12/15 00:34:05 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 retry sending PutAppend
+2020/12/15 00:34:05 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 retry sending PutAppend
+2020/12/15 00:34:05 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 retry sending PutAppend
+2020/12/15 00:34:05 replicateOp, op= {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 START apply msg {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 DP= { 
+2020/12/15 00:34:05 0- 
+2020/12/15 00:34:05 after reading res= {Err:OK Value:}
+2020/12/15 00:34:05 }
+2020/12/15 00:34:05 END apply msg {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:05 PutAppend success got reply &{Err:OK}
+2020/12/15 00:34:05 PutAppend sendind : &{Key:0 Value:x 0 0 y Op:Append Clerkid:1607978044610584000 Seqno:1607978045936997000}
+2020/12/15 00:34:05 replicateOp, op= {Key:0 Value:x 0 0 y Op:Append Clerkid:1607978044610584000 Seqno:1607978045936997000}
+2020/12/15 00:34:06 START apply msg {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:06 DP= { 
+2020/12/15 00:34:06 0- 
+2020/12/15 00:34:06 }
+2020/12/15 00:34:06 START apply msg {Key:0 Value:x 0 0 y Op:Append Clerkid:1607978044610584000 Seqno:1607978045936997000}
+2020/12/15 00:34:06 DP= { 
+2020/12/15 00:34:06 START apply msg {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:06 END apply msg {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:06 START apply msg {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:06 DP= { 
+2020/12/15 00:34:06 START apply msg {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:06 after reading res= {Err:OK Value:}
+2020/12/15 00:34:06 0-x 0 0 y 
+2020/12/15 00:34:06 }
+2020/12/15 00:34:06 DP= { 
+2020/12/15 00:34:06 0- 
+2020/12/15 00:34:06 }
+2020/12/15 00:34:06 0- 
+2020/12/15 00:34:06 END apply msg {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:06 DP= { 
+2020/12/15 00:34:06 PutAppend success got reply &{Err:OK}
+2020/12/15 00:34:06 0- 
+2020/12/15 00:34:06 }
+2020/12/15 00:34:06 }
+2020/12/15 00:34:06 END apply msg {Key:0 Value:x 0 0 y Op:Append Clerkid:1607978044610584000 Seqno:1607978045936997000}
+2020/12/15 00:34:06 END apply msg {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:06 END apply msg {Key:0 Value: Op:Put Clerkid:1607978044610584000 Seqno:1607978044610594000}
+2020/12/15 00:34:06 replicateOp, op= {Key:0 Value: Op:Get Clerkid:1607978044610584000 Seqno:1607978046041603000}
+2020/12/15 00:34:06 START apply msg {Key:0 Value:x 0 0 y Op:Append Clerkid:1607978044610584000 Seqno:1607978045936997000}
+2020/12/15 00:34:06 START apply msg {Key:0 Value:x 0 0 y Op:Append Clerkid:1607978044610584000 Seqno:1607978045936997000}
+2020/12/15 00:34:06 START apply msg {Key:0 Value:x 0 0 y Op:Append Clerkid:1607978044610584000 Seqno:1607978045936997000}
+2020/12/15 00:34:06 START apply msg {Key:0 Value:x 0 0 y Op:Append Clerkid:1607978044610584000 Seqno:1607978045936997000}
+2020/12/15 00:34:06 START apply msg {Key:0 Value: Op:Get Clerkid:1607978044610584000 Seqno:1607978046041603000}
+2020/12/15 00:34:06 DP= { 
+2020/12/15 00:34:06 0-x 0 0 y 
+2020/12/15 00:34:06 after reading res= {Err:OK Value:x 0 0 y}
+2020/12/15 00:34:06 }
+2020/12/15 00:34:06 END apply msg {Key:0 Value: Op:Get Clerkid:1607978044610584000 Seqno:1607978046041603000}
+2020/12/15 00:34:06 GET success got reply &{Err:OK Value:x 0 0 y}
+2020/12/15 00:34:06 replicateOp, op= {Key:0 Value: Op:Get Clerkid:1607978044610584000 Seqno:1607978046144512000}
+2020/12/15 00:34:06 after sleep
+2020/12/15 00:34:06 after sleep
+2020/12/15 00:34:07 after sleep
+2020/12/15 00:34:07 after sleep
+2020/12/15 00:34:07 after reading res= {Err:ErrTimeOut Value:}
+2020/12/15 00:34:07 GET success got reply &{Err:ErrTimeOut Value:}
+2020/12/15 00:34:07 get wrong value, key 0, wanted:
+x 0 0 y
+, got
+
+exit status 1
+FAIL	_/Users/zviki/Distributed-Systems/dd-labs/src/kvraft	2.998s

@@ -1,15 +1,18 @@
 package kvraft
 
 import (
-	"../labgob"
-	"../labrpc"
+	"fmt"
 	"log"
-	"../raft"
 	"sync"
 	"sync/atomic"
+	"time"
+
+	"../labgob"
+	"../labrpc"
+	"../raft"
 )
 
-const Debug = 0
+const Debug = 1
 
 func DPrintf(format string, a ...interface{}) (n int, err error) {
 	if Debug > 0 {
@@ -18,11 +21,17 @@ func DPrintf(format string, a ...interface{}) (n int, err error) {
 	return
 }
 
-
 type Op struct {
-	// Your definitions here.
-	// Field names must start with capital letters,
-	// otherwise RPC will break.
+	Key     string
+	Value   string
+	Op      string
+	Clerkid int64
+	Seqno   int64
+}
+
+type Result struct {
+	Err   Err
+	Value string
 }
 
 type KVServer struct {
@@ -35,15 +44,110 @@ type KVServer struct {
 	maxraftstate int // snapshot if log grows this big
 
 	// Your definitions here.
+	db         map[string]string
+	clerk2Chan map[int64]chan Result
+	lastOp     map[int64]int64
 }
 
+func (kv *KVServer) monitorOperation() {
+	for applyMsg := range kv.applyCh {
+		op := applyMsg.Command.(Op)
+		DPrintf(fmt.Sprintf("START apply msg %+v", op))
+
+		kv.mu.Lock()
+		var res Result
+		switch op.Op {
+		case GET:
+			val, ok := kv.db[op.Key]
+			if ok {
+				res = Result{OK, val}
+			} else {
+				res = Result{ErrNoKey, ""}
+			}
+		case PUT:
+			kv.db[op.Key] = op.Value
+			res = Result{OK, ""}
+		case APPEND:
+			_, ok := kv.db[op.Key]
+			if !ok {
+				kv.db[op.Key] = ""
+			}
+			kv.db[op.Key] += op.Value
+			res = Result{OK, ""}
+		}
+		ch := kv.clerk2Chan[op.Clerkid]
+		kv.mu.Unlock()
+		ch <- res
+		DPrintf("DP= { ")
+		for k, v := range kv.db {
+			DPrintf(fmt.Sprintf("%s-%s ", k, v))
+		}
+		DPrintf("}")
+
+		DPrintf(fmt.Sprintf("END apply msg %+v", op))
+	}
+}
 
 func (kv *KVServer) Get(args *GetArgs, reply *GetReply) {
-	// Your code here.
+	op := &Op{
+		Key:     args.Key,
+		Value:   "",
+		Op:      GET,
+		Clerkid: args.Clerkid,
+		Seqno:   args.Seqno,
+	}
+
+	err, val := kv.replicateOp(op)
+
+	reply.Err = err
+	reply.Value = val
 }
 
 func (kv *KVServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) {
-	// Your code here.
+	op := &Op{
+		Key:     args.Key,
+		Value:   args.Value,
+		Op:      args.Op,
+		Clerkid: args.Clerkid,
+		Seqno:   args.Seqno,
+	}
+
+	err, _ := kv.replicateOp(op)
+
+	reply.Err = err
+}
+
+func (kv *KVServer) replicateOp(op *Op) (Err, string) {
+	kv.mu.Lock()
+	lastop := kv.lastOp[op.Clerkid]
+	kv.mu.Unlock()
+	if lastop > op.Seqno {
+		return ErrDuplicateOp, ""
+	}
+
+	resChan := make(chan Result, 1)
+	kv.mu.Lock()
+	kv.clerk2Chan[op.Clerkid] = resChan
+	kv.mu.Unlock()
+	DPrintf(fmt.Sprintf("replicateOp, op= %+v", *op))
+	_, _, isleader := kv.rf.Start(*op)
+	if !isleader {
+		return ErrWrongLeader, ""
+	}
+
+	go func() {
+		time.Sleep(time.Second)
+		DPrintf("after sleep")
+		resChan <- Result{ErrTimeOut, ""}
+	}()
+
+	res := <-resChan
+	DPrintf(fmt.Sprintf("after reading res= %+v", res))
+	kv.mu.Lock()
+	kv.lastOp[op.Clerkid] = op.Seqno
+	kv.mu.Unlock()
+
+	return res.Err, res.Value
 }
 
 //
@@ -96,6 +200,9 @@ func StartKVServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persiste
 	kv.rf = raft.Make(servers, me, persister, kv.applyCh)
 
 	// You may need initialization code here.
-
+	kv.db = make(map[string]string)
+	kv.clerk2Chan = make(map[int64]chan Result)
+	kv.lastOp = make(map[int64]int64)
+	go kv.monitorOperation()
 	return kv
 }
